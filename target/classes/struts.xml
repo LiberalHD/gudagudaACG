@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN" "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+	<package name="content" extends="struts-default" namespace="/">
+		
+		<action name="editContent">
+            <result>/SaveContent.jsp</result>
+        </action>
+		
+        <action name="saveContent" class="contentAction" method="saveContent">
+            <result name="success">/SaveContentSuccess.jsp</result>
+            <result name="input">/SaveContent.jsp</result>
+        </action>
+        
+    </package>
+
+</struts>
