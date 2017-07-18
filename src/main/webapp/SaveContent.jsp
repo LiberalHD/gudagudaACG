@@ -16,15 +16,48 @@
 	
 		<h2>填写下方表单发布新闻。</h2>
 		
-		<s:form action="saveContent">
-			<s:textfield name="contentModel.title" label="文章标题" />
-			<s:textfield name="contentModel.author" label="作者" />
-			<s:textfield name="contentModel.date"  label ="日期"/>  
-			<s:textfield name="contentModel.content"  label="文章内容"  />
-			<s:textfield name="contentModel.keywords"  label="关键字（不同关键字用空格隔开）"  />
-			<s:textfield name="contentModel.quote"  label="引用URL（不同URL用空格隔开）"  />
-			<s:submit/>
-		</s:form>	
+		<s:form action="saveContent" method="post" theme="simple">
+	        <table width="600px">
+	            <tr>
+	                <th>文章标题</th>
+	                <td><s:textfield name="contentModel.title"/></td>
+	                <td><font color="red"><s:fielderror fieldName="contentModel.title"/></font></td>
+	            </tr>
+	            <tr>
+	                <th>作者</th>
+	                <td><s:textfield name="contentModel.author"/></td>
+	                <td><font color="red"><s:fielderror fieldName="contentModel.author"/></font></td>
+	            </tr>
+	            <tr>
+	                <th>发布日期（yyyy-mm-dd）</th>
+	                <td><s:textfield name="contentModel.date"/></td>
+	                <td><font color="red"><s:fielderror fieldName="contentModel.date"/></font></td>
+	            </tr>
+	            <tr>
+	                <th>正文</th>
+	                <td><s:textfield name="contentModel.content"/></td>
+	                <td><font color="red"><s:fielderror fieldName="contentModel.content"/></font></td>
+	            </tr>
+	            <tr>
+	                <th>关键字（不同关键字用空格隔开）</th>
+	                <td><s:textfield name="contentModel.keywords"/></td>
+	                <td><font color="red"><s:fielderror fieldName="contentModel.keywords"/></font></td>
+	            </tr>
+	            <tr>
+	                <th>引用URL（不同URL用空格隔开）</th>
+	                <td><s:textfield name="contentModel.quote"/></td>
+	                <td><font color="red"><s:fielderror fieldName="contentModel.quote"/></font></td>
+	            </tr>
+	            <tr>
+	                <th colspan="2">
+	                    <s:submit value="Submit"/>
+	                </th>
+	                <th> </th>
+	            </tr>
+	        </table>
+	    </s:form>
+	
+		<s:actionmessage/>
 	
 	</body>
   

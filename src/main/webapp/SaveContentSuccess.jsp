@@ -18,7 +18,8 @@
     	发布文章的信息为:  <s:property value="contentModel" /> 
     </p>
 
-    <p><a href="<s:url action='editContent' />" >继续发布</a>.</p>
+    <p><a href="<s:url action='editContent' />" >继续发布</a></p>
+    <p><a href="<s:url action='index' />" >返回主页</a></p>
     
   </body>
 </html>
