@@ -10,6 +10,10 @@
             <result>/Index.jsp</result>
         </action>
         
+        <action name="test">
+            <result>/Test.jsp</result>
+        </action>
+        
     </package>
 
 	<package name="content" extends="struts-default" namespace="/">
