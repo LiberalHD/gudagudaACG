@@ -4,16 +4,6 @@
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 
-<%  
-	int newsNumber = 20;
-
-    List list = new ArrayList();  
-    for (int index = 1; index <= newsNumber; index ++) {  
-        list.add(index);  
-    }  
-    session.setAttribute("list", list);  
-%>  
-
 <html>
 
 	<head>
@@ -36,28 +26,20 @@
 	    
 	    <table border="1">
             <tr align="center">
-            	<td>  
-                	近期新闻  
-            	</td>      
+            	<td colspan="3">  近期新闻  </td>
             </tr>
-            
-            <c:forEach items="${list}" var="item">  
-            <c:if test="${i.index % 2 == 0}" >  
-            
-            <tr align="center">  
-            
-            </c:if>  
-            <c:if test="${i.index % 2 == 1}">  
-            
-            <tr align="center">  
-            
-            </c:if>  
-            	<td>  
-                	<h2>${item}</h2>  
-            	</td>  
-	        </tr>  
-	        </c:forEach>  
-	        
+            <tr align="center">
+            	<td>标题</td>
+            	<td>作者</td>
+            	<td>日期</td>
+			</tr>
+            <s:iterator value="contentList" status="i">
+            <tr align="center">
+            	<td><s:property value="title" /></td>
+            	<td><s:property value="author" /></td>
+            	<td><s:property value="date" /></td>
+			</tr>
+			</s:iterator>
         </table>
 	        
 	</body>

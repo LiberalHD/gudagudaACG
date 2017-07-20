@@ -6,8 +6,8 @@
 
 	<package name="index" extends="struts-default" namespace="/">
 		
-		<action name="index">
-            <result>/Index.jsp</result>
+		<action name="index" class="indexAction" method="showContent">
+            <result name="success">/Index.jsp</result>
         </action>
         
         <action name="test">

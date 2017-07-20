@@ -14,7 +14,8 @@ public class ContentServiceImpl implements ContentService
     private ContentDao contentDao;
 	
     @Override
-    public void saveContent(ContentModel contentModel) {
+    public void saveContent(ContentModel contentModel) 
+    {
     	contentDao.saveContent(contentModel);
     }
 }
