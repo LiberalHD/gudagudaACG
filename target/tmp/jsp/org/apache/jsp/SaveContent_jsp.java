@@ -17,6 +17,7 @@ public final class SaveContent_jsp extends org.apache.jasper.runtime.HttpJspBase
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_s_head_nobody;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_s_fielderror_fieldName_nobody;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_s_actionmessage_nobody;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_s_url_action_nobody;
 
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
 
@@ -31,6 +32,7 @@ public final class SaveContent_jsp extends org.apache.jasper.runtime.HttpJspBase
     _jspx_tagPool_s_head_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_s_fielderror_fieldName_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_s_actionmessage_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_s_url_action_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
   }
 
   public void _jspDestroy() {
@@ -40,6 +42,7 @@ public final class SaveContent_jsp extends org.apache.jasper.runtime.HttpJspBase
     _jspx_tagPool_s_head_nobody.release();
     _jspx_tagPool_s_fielderror_fieldName_nobody.release();
     _jspx_tagPool_s_actionmessage_nobody.release();
+    _jspx_tagPool_s_url_action_nobody.release();
   }
 
   public void _jspService(HttpServletRequest request, HttpServletResponse response)
@@ -97,6 +100,13 @@ public final class SaveContent_jsp extends org.apache.jasper.runtime.HttpJspBase
         return;
       out.write("\r\n");
       out.write("\t\r\n");
+      out.write("\t\t<p>\r\n");
+      out.write("\t\t\t<a href=\"");
+      if (_jspx_meth_s_url_0(_jspx_page_context))
+        return;
+      out.write("\" >返回首页</a>\r\n");
+      out.write("\t\t</p>\r\n");
+      out.write("\t\t\r\n");
       out.write("\t</body>\r\n");
       out.write("  \r\n");
       out.write("</html>");
@@ -138,7 +148,7 @@ public final class SaveContent_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.struts2.views.jsp.ui.FormTag _jspx_th_s_form_0 = (org.apache.struts2.views.jsp.ui.FormTag) _jspx_tagPool_s_form_theme_method_action.get(org.apache.struts2.views.jsp.ui.FormTag.class);
     _jspx_th_s_form_0.setPageContext(_jspx_page_context);
     _jspx_th_s_form_0.setParent(null);
-    _jspx_th_s_form_0.setAction("saveContent");
+    _jspx_th_s_form_0.setAction("saveContentForm");
     _jspx_th_s_form_0.setMethod("post");
     _jspx_th_s_form_0.setTheme("simple");
     int _jspx_eval_s_form_0 = _jspx_th_s_form_0.doStartTag();
@@ -150,7 +160,7 @@ public final class SaveContent_jsp extends org.apache.jasper.runtime.HttpJspBase
       }
       do {
         out.write("\r\n");
-        out.write("\t        <table width=\"600px\">\r\n");
+        out.write("\t        <table>\r\n");
         out.write("\t            <tr>\r\n");
         out.write("\t                <th>文章标题</th>\r\n");
         out.write("\t                <td>");
@@ -491,6 +501,24 @@ public final class SaveContent_jsp extends org.apache.jasper.runtime.HttpJspBase
       return true;
     }
     _jspx_tagPool_s_actionmessage_nobody.reuse(_jspx_th_s_actionmessage_0);
+    return false;
+  }
+
+  private boolean _jspx_meth_s_url_0(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  s:url
+    org.apache.struts2.views.jsp.URLTag _jspx_th_s_url_0 = (org.apache.struts2.views.jsp.URLTag) _jspx_tagPool_s_url_action_nobody.get(org.apache.struts2.views.jsp.URLTag.class);
+    _jspx_th_s_url_0.setPageContext(_jspx_page_context);
+    _jspx_th_s_url_0.setParent(null);
+    _jspx_th_s_url_0.setAction("index");
+    int _jspx_eval_s_url_0 = _jspx_th_s_url_0.doStartTag();
+    if (_jspx_th_s_url_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_s_url_action_nobody.reuse(_jspx_th_s_url_0);
+      return true;
+    }
+    _jspx_tagPool_s_url_action_nobody.reuse(_jspx_th_s_url_0);
     return false;
   }
 }

@@ -2,7 +2,6 @@ D:\gudaguda\workspace\gudagudaACG\src\main\java\org\gudagudaACG\action\IndexActi
 D:\gudaguda\workspace\gudagudaACG\src\main\java\org\gudagudaACG\model\ContentModel.java
 D:\gudaguda\workspace\gudagudaACG\src\main\java\org\gudagudaACG\service\ContentService.java
 D:\gudaguda\workspace\gudagudaACG\src\main\java\org\gudagudaACG\dao\ContentDao.java
-D:\gudaguda\workspace\gudagudaACG\src\main\java\org\gudagudaACG\service\impl\IndexServiceImpl.java
-D:\gudaguda\workspace\gudagudaACG\src\main\java\org\gudagudaACG\service\IndexService.java
-D:\gudaguda\workspace\gudagudaACG\src\main\java\org\gudagudaACG\action\ContentAction.java
+D:\gudaguda\workspace\gudagudaACG\src\main\java\org\gudagudaACG\action\SaveContentAction.java
+D:\gudaguda\workspace\gudagudaACG\src\main\java\org\gudagudaACG\action\ShowContentAction.java
 D:\gudaguda\workspace\gudagudaACG\src\main\java\org\gudagudaACG\service\impl\ContentServiceImpl.java

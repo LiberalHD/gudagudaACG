@@ -16,8 +16,8 @@
 	
 		<h2>填写下方表单发布新闻。</h2>
 		
-		<s:form action="saveContent" method="post" theme="simple">
-	        <table width="600px">
+		<s:form action="saveContentForm" method="post" theme="simple">
+	        <table>
 	            <tr>
 	                <th>文章标题</th>
 	                <td><s:textfield name="contentModel.title"/></td>
@@ -59,6 +59,10 @@
 	
 		<s:actionmessage/>
 	
+		<p>
+			<a href="<s:url action='index' />" >返回首页</a>
+		</p>
+		
 	</body>
   
 </html>

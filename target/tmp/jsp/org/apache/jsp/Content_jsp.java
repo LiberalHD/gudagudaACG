@@ -5,7 +5,7 @@ import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 import java.util.*;
 
-public final class Index_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class Content_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -13,8 +13,6 @@ public final class Index_jsp extends org.apache.jasper.runtime.HttpJspBase
   private static java.util.List<String> _jspx_dependants;
 
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_s_iterator_value_status;
-  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_s_param_value_name_nobody;
-  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_s_url_action;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_s_url_action_nobody;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_s_property_value_nobody;
 
@@ -26,16 +24,12 @@ public final class Index_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   public void _jspInit() {
     _jspx_tagPool_s_iterator_value_status = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
-    _jspx_tagPool_s_param_value_name_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
-    _jspx_tagPool_s_url_action = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_s_url_action_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_s_property_value_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
   }
 
   public void _jspDestroy() {
     _jspx_tagPool_s_iterator_value_status.release();
-    _jspx_tagPool_s_param_value_name_nobody.release();
-    _jspx_tagPool_s_url_action.release();
     _jspx_tagPool_s_url_action_nobody.release();
     _jspx_tagPool_s_property_value_nobody.release();
   }
@@ -98,7 +92,7 @@ public final class Index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t    \r\n");
       out.write("\t    <table border=\"1\">\r\n");
       out.write("            <tr align=\"center\">\r\n");
-      out.write("            \t<td colspan=\"3\">近期新闻 </td>\r\n");
+      out.write("            \t<td colspan=\"3\">  近期新闻  </td>\r\n");
       out.write("            </tr>\r\n");
       out.write("            <tr align=\"center\">\r\n");
       out.write("            \t<td>标题</td>\r\n");
@@ -135,7 +129,7 @@ public final class Index_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.struts2.views.jsp.URLTag _jspx_th_s_url_0 = (org.apache.struts2.views.jsp.URLTag) _jspx_tagPool_s_url_action_nobody.get(org.apache.struts2.views.jsp.URLTag.class);
     _jspx_th_s_url_0.setPageContext(_jspx_page_context);
     _jspx_th_s_url_0.setParent(null);
-    _jspx_th_s_url_0.setAction("saveContent");
+    _jspx_th_s_url_0.setAction("editContent");
     int _jspx_eval_s_url_0 = _jspx_th_s_url_0.doStartTag();
     if (_jspx_th_s_url_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_s_url_action_nobody.reuse(_jspx_th_s_url_0);
@@ -183,17 +177,10 @@ public final class Index_jsp extends org.apache.jasper.runtime.HttpJspBase
       do {
         out.write("\r\n");
         out.write("            <tr align=\"center\">\r\n");
-        out.write("            \t<td>\r\n");
-        out.write("            \t\t<a href=\"");
-        if (_jspx_meth_s_url_2((javax.servlet.jsp.tagext.JspTag) _jspx_th_s_iterator_0, _jspx_page_context))
-          return true;
-        out.write("\">\r\n");
-        out.write("            \t\t\t");
+        out.write("            \t<td>");
         if (_jspx_meth_s_property_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_s_iterator_0, _jspx_page_context))
           return true;
-        out.write("\r\n");
-        out.write("            \t\t</a>\r\n");
-        out.write("            \t</td>\r\n");
+        out.write("</td>\r\n");
         out.write("            \t<td>");
         if (_jspx_meth_s_property_1((javax.servlet.jsp.tagext.JspTag) _jspx_th_s_iterator_0, _jspx_page_context))
           return true;
@@ -216,59 +203,6 @@ public final class Index_jsp extends org.apache.jasper.runtime.HttpJspBase
       return true;
     }
     _jspx_tagPool_s_iterator_value_status.reuse(_jspx_th_s_iterator_0);
-    return false;
-  }
-
-  private boolean _jspx_meth_s_url_2(javax.servlet.jsp.tagext.JspTag _jspx_th_s_iterator_0, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  s:url
-    org.apache.struts2.views.jsp.URLTag _jspx_th_s_url_2 = (org.apache.struts2.views.jsp.URLTag) _jspx_tagPool_s_url_action.get(org.apache.struts2.views.jsp.URLTag.class);
-    _jspx_th_s_url_2.setPageContext(_jspx_page_context);
-    _jspx_th_s_url_2.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_s_iterator_0);
-    _jspx_th_s_url_2.setAction("showContent");
-    int _jspx_eval_s_url_2 = _jspx_th_s_url_2.doStartTag();
-    if (_jspx_eval_s_url_2 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
-      if (_jspx_eval_s_url_2 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
-        out = _jspx_page_context.pushBody();
-        _jspx_th_s_url_2.setBodyContent((javax.servlet.jsp.tagext.BodyContent) out);
-        _jspx_th_s_url_2.doInitBody();
-      }
-      do {
-        if (_jspx_meth_s_param_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_s_url_2, _jspx_page_context))
-          return true;
-        int evalDoAfterBody = _jspx_th_s_url_2.doAfterBody();
-        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
-          break;
-      } while (true);
-      if (_jspx_eval_s_url_2 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE)
-        out = _jspx_page_context.popBody();
-    }
-    if (_jspx_th_s_url_2.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _jspx_tagPool_s_url_action.reuse(_jspx_th_s_url_2);
-      return true;
-    }
-    _jspx_tagPool_s_url_action.reuse(_jspx_th_s_url_2);
-    return false;
-  }
-
-  private boolean _jspx_meth_s_param_0(javax.servlet.jsp.tagext.JspTag _jspx_th_s_url_2, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  s:param
-    org.apache.struts2.views.jsp.ParamTag _jspx_th_s_param_0 = (org.apache.struts2.views.jsp.ParamTag) _jspx_tagPool_s_param_value_name_nobody.get(org.apache.struts2.views.jsp.ParamTag.class);
-    _jspx_th_s_param_0.setPageContext(_jspx_page_context);
-    _jspx_th_s_param_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_s_url_2);
-    _jspx_th_s_param_0.setName("title");
-    _jspx_th_s_param_0.setValue("title");
-    int _jspx_eval_s_param_0 = _jspx_th_s_param_0.doStartTag();
-    if (_jspx_th_s_param_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _jspx_tagPool_s_param_value_name_nobody.reuse(_jspx_th_s_param_0);
-      return true;
-    }
-    _jspx_tagPool_s_param_value_name_nobody.reuse(_jspx_th_s_param_0);
     return false;
   }
 

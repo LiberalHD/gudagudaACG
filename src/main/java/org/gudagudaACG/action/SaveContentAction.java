@@ -10,7 +10,7 @@ import org.gudagudaACG.model.ContentModel;
 
 @Controller
 @Scope("prototype")
-public class ContentAction extends ActionSupport 
+public class SaveContentAction extends ActionSupport 
 {
 	private static final long serialVersionUID = 1L;
 	

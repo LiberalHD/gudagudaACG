@@ -46,7 +46,7 @@ public class ContentModel {
 	}
 	
 	public String toString() {
-		return "id: " + getId() + "title: " + getTitle() + "author: " + getAuthor() + "date: " + getDate() + "content: " + getContent() + "keywords: " + getKeywords() + "quote: " + getQuote();
+		return "id: " + getId() + "\r\ntitle: " + getTitle() + "\r\nauthor: " + getAuthor() + "\r\ndate: " + getDate() + "\r\ncontent: " + getContent() + "\r\nkeywords: " + getKeywords() + "\r\nquote: " + getQuote();
 	}
 
 	public int getId() {

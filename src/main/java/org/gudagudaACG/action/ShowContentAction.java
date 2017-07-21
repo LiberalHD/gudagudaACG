@@ -4,36 +4,46 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import com.opensymphony.xwork2.ActionSupport;
 import org.springframework.beans.factory.annotation.Autowired;
-import java.util.List;
 
 import org.gudagudaACG.model.ContentModel;
 import org.gudagudaACG.service.ContentService;
 
 @Controller
 @Scope("prototype")
-public class IndexAction extends ActionSupport 
+public class ShowContentAction extends ActionSupport 
 {
 	private static final long serialVersionUID = 1L;
 	
 	@Autowired
 	private ContentService contentService;
 	
-	private List<ContentModel> contentList;
+	private ContentModel contentModel;
+	private String title;
 	
-	public String execute()
+	public ContentModel getContentModel() 
 	{
-		contentList = contentService.showAllContent();
-			
-		return SUCCESS;
-	}
-	
-	public List<ContentModel> getContentList() 
-	{
-		return contentList;
+		return contentModel;
 	}
 
-	public void setContentList(List<ContentModel> contentList) 
+	public void setContentModel(ContentModel contentModel) 
 	{
-		this.contentList = contentList;
+		this.contentModel = contentModel;
+	}
+	
+	public String getTitle() 
+	{
+		return title;
+	}
+
+	public void setTitle(String title) 
+	{
+		this.title = title;
+	}
+
+	public String execute()
+	{
+		contentModel = contentService.showOneContent(title);
+		
+		return SUCCESS;
 	}
 }

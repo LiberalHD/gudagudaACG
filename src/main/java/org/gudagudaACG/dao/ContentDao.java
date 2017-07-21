@@ -19,17 +19,30 @@ public class ContentDao
         template = new HibernateTemplate(sessionFactory);
     }
 	
-	public void saveContent(ContentModel contentModel) 
+	public void addContent(ContentModel contentModel) 
     {
         template.save(contentModel);
     }
 
-	public List<?> loadContent() 
+	@SuppressWarnings("unchecked")
+	public List<ContentModel> selectContent(String queryString) 
     {
-		String queryString = "from ContentModel contentModel";
-		
-		List<?> ret = template.find(queryString);
+		List<ContentModel> ret = (List<ContentModel>) template.find(queryString);
 		
 		return ret;
+    }
+	
+	public void deleteContent(String queryString) 
+    {
+		List<ContentModel> qresult = selectContent(queryString);
+		for(int i = 0 ; i < qresult.size() ; i ++) 
+		{
+			deleteContent(qresult.get(i));
+		}
+    }
+	
+	public void deleteContent(ContentModel contentmodel) 
+    {
+		template.delete(contentmodel);
     }
 }
