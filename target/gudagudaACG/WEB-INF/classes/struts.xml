@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN" "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+
+	<package name="page" extends="struts-default" namespace="/">
+		
+		<action name="index" class="indexAction">
+            <result name="success">/Index.jsp</result>
+        </action>
+        
+        <action name="saveContent">
+            <result name="success">/SaveContent.jsp</result>
+        </action>
+        
+        <action name="showContent" class="showContentAction">
+            <result name="success">/ShowContent.jsp</result>
+        </action>
+        
+        <action name="test">
+            <result>/Test.jsp</result>
+        </action>
+        
+    </package>
+
+	<package name="form" extends="struts-default" namespace="/">
+		
+        <action name="saveContentForm" class="saveContentAction" method="saveContent">
+            <result name="success">/SaveContent.jsp</result>
+            <result name="input">/SaveContent.jsp</result>
+        </action>
+        
+    </package>
+
+</struts>
