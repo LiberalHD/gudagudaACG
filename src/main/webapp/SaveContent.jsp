@@ -1,13 +1,20 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@ taglib prefix="s" uri="/struts-tags" %>
-
 <!DOCTYPE html>
+
+<%@ page language="java" import="java.util.*" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 
 <html>
 
 	<head>
 		<s:head />
+		
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="pragma" content="no-cache">  
+    	<meta http-equiv="cache-control" content="no-cache">  
+    	<meta http-equiv="expires" content="0">      
+    	
+    	<link rel="stylesheet" type="text/css" href="styles/Index.css">
 		
 		<title>新闻发布页面</title>
 	</head>
