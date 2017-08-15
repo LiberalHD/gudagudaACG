@@ -158,6 +158,7 @@
 	            <configuration>
 	                <webApp>
 	                    <contextPath>/${build.finalName}</contextPath>
+	                    <defaultsDescriptor>src/main/resources/webdefault.xml</defaultsDescriptor>
 	                </webApp>
 	                <stopKey>CTRL+C</stopKey>
 	                <stopPort>8999</stopPort>
