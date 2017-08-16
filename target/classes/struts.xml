@@ -31,7 +31,7 @@
 	<package name="form" extends="struts-default" namespace="/">
 		
         <action name="saveContentForm" class="saveContentAction" method="saveContent">
-            <result name="success">/Index.jsp</result>
+            <result name="success">/SaveContent.jsp</result>
             <result name="input">/SaveContent.jsp</result>
         </action>
         

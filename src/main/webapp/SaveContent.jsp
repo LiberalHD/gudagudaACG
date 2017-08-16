@@ -22,8 +22,8 @@
 	<body>
 	
 		<div class="div_body" align="left">
-			<div class="div_top" align="left">
-				
+			<div class="div_top" align="center">
+				<img src="styles/images/logo1.png" height="80%"/>
 			</div>	
 			
 			<div class="div_middle" align="left">
@@ -34,7 +34,7 @@
 				<div class="div_content" align="center">
 					<s:form action="saveContentForm" method="post" theme="simple">
 					<div class="div_edit" align="left">
-						<h2>填写下方表单发布新闻。</h2>
+						<h2 align="center">填写下方表单发布新闻。</h2>
 				        <table>
 				            <tr>
 				                <th>文章标题</th>
@@ -61,7 +61,7 @@
 				                <td><s:textfield name="contentModel.quote"/></td>
 				                <td><font color="red"><s:fielderror fieldName="contentModel.quote"/></font></td>
 				            </tr>
-				            <tr>
+				            <tr align="center">
 				                <th colspan="2">
 				                    <s:submit value="Submit"/>
 				                </th>
@@ -76,8 +76,8 @@
 					</div>
 					
 					<div class="div_text" align="center">
-						<p> 正文</p>
-						<s:textfield name="contentModel.content"/>
+						<p align="left"> 正文</p>
+						<s:textarea name="contentModel.content" cssStyle="width:90%; height:1000px"/>
 						<font color="red"><s:fielderror fieldName="contentModel.content"/></font>
 					</div>
 					

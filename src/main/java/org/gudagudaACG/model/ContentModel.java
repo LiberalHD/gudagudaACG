@@ -111,6 +111,6 @@ public class ContentModel implements Comparable
 		ContentModel sdto = (ContentModel)o;
 	    String otherdate = sdto.getDate();
 	    
-	    return this.date.compareTo(otherdate);
+	    return (-this.date.compareTo(otherdate));
 	}
 }

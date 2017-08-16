@@ -19,8 +19,8 @@
 	
 	<body>
 		<div class="div_body" align="center">
-			<div class="div_top" align="left">
-				
+			<div class="div_top" align="center">
+				<img src="styles/images/logo1.png" height="80%"/>
 			</div>
 			
 			<div class="div_middle" align="left">
