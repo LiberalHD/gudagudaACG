@@ -18,6 +18,10 @@
             <result name="success">/ShowContent.jsp</result>
         </action>
         
+        <action name="allContent" class="allContentAction">
+            <result name="success">/AllContent.jsp</result>
+        </action>
+        
         <action name="test">
             <result>/Test.jsp</result>
         </action>
@@ -27,7 +31,7 @@
 	<package name="form" extends="struts-default" namespace="/">
 		
         <action name="saveContentForm" class="saveContentAction" method="saveContent">
-            <result name="success">/SaveContent.jsp</result>
+            <result name="success">/Index.jsp</result>
             <result name="input">/SaveContent.jsp</result>
         </action>
         

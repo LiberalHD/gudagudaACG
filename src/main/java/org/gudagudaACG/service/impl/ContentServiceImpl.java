@@ -2,6 +2,7 @@ package org.gudagudaACG.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import java.util.Collections;
 import java.util.List;
 
 import org.gudagudaACG.service.ContentService;
@@ -20,11 +21,14 @@ public class ContentServiceImpl implements ContentService
     	contentDao.addContent(contentModel);
     }
     
+    @SuppressWarnings("unchecked")
     @Override
 	public List<ContentModel> showAllContent() 
 	{
     	String queryString = "from ContentModel contentModel";
 		List<ContentModel> contentList = contentDao.selectContent(queryString);
+		
+		Collections.sort(contentList);
 		
 		return contentList;
 	}
@@ -37,6 +41,22 @@ public class ContentServiceImpl implements ContentService
 		
 		return contentList.get(0);
     }
+    
+    
+	@Override
+   	public List<ContentModel> showLatestKContent(int k)
+   	{
+   		List<ContentModel> contentList = showAllContent();
+   		
+   		int size = contentList.size();
+   		if (size > k)
+   		{
+   			for(int i = k; i < size; i ++)
+   			{
+   			    contentList.remove(k);
+   			}
+   		}
+   		
+   		return contentList;
+   	}
 }
-
-

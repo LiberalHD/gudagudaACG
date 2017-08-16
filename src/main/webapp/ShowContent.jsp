@@ -12,35 +12,59 @@
     	<meta http-equiv="cache-control" content="no-cache">  
     	<meta http-equiv="expires" content="0">      
 		
-		<link rel="stylesheet" type="text/css" href="styles/Index.css">
+		<link rel="stylesheet" type="text/css" href="styles/ShowContent.css">
 		
-		<title>gudagudaACG</title>
+		<title>新闻内容页</title>
 	</head>
 	
 	<body>
-	
-		<h1>gudagudaACG</h1>
+		<div class="div_body" align="left">
+			<div class="div_top" align="left">
+				
+			</div>	
+			
+			<div class="div_middle" align="left">
+				<div class="div_left" align="left">
+				
+				</div>
+				
+				<div class="div_content" align="center">
+					<h1>gudagudaACG</h1>
 	    
-	    <table border="1">
-            <tr align="left">
-            	<td colspan="3"><s:property value="contentModel.title" /></td>
-            </tr>
-            <tr align="left">
-            	<td><s:property value="contentModel.author" /></td>
-            	<td><s:property value="contentModel.date" /></td>
-            	<td><s:property value="contentModel.keywords" /></td>
-			</tr>
-            <tr align="left">
-            	<td colspan="3"><s:property value="contentModel.content" /></td>
-			</tr>
-			<tr align="left">
-            	<td colspan="3"><s:property value="contentModel.quote" /></td>
-			</tr>
-        </table>
-        
-        <p>
-			<a href="<s:url action='index' />" >返回首页</a>
-		</p>
+				    <table>
+			            <tr align="left">
+			            	<td colspan="3"><s:property value="contentModel.title" /></td>
+			            </tr>
+			            
+			            <tr align="left">
+			            	<td><s:property value="contentModel.author" /></td>
+			            	<td><s:property value="contentModel.date" /></td>
+			            	<td><s:property value="contentModel.keywords" /></td>
+						</tr>
+						
+			            <tr align="left">
+			            	<td colspan="3"><s:property value="contentModel.content" /></td>
+						</tr>
+						
+						<tr align="left">
+			            	<td colspan="3"><s:property value="contentModel.quote" /></td>
+						</tr>
+			        </table>
+			        
+			        <p>
+						<a href="<s:url action='index' />" >返回首页</a>
+					</p>
+				</div>
+				
+				<div class="div_right" align="left">
+				
+				</div>
+			</div>
+			
+			<div class="div_bottom" align="left">
+				
+			</div>
+		</div>
 	        
 	</body>
   

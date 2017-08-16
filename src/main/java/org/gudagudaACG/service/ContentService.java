@@ -9,4 +9,5 @@ public interface ContentService
 	void saveContent(ContentModel contentModel);
 	List<ContentModel> showAllContent();
 	ContentModel showOneContent(String title);
+	List<ContentModel> showLatestKContent(int k);
 }

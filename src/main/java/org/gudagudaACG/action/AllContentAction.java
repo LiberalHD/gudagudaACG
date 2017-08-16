@@ -11,10 +11,9 @@ import org.gudagudaACG.service.ContentService;
 
 @Controller
 @Scope("prototype")
-public class IndexAction extends ActionSupport 
+public class AllContentAction extends ActionSupport 
 {
-	private int newsnum = 10;
-	
+	private int newsnum = 0;
 	private static final long serialVersionUID = 1L;
 	
 	@Autowired
@@ -24,19 +23,10 @@ public class IndexAction extends ActionSupport
 	
 	public String execute()
 	{
-		contentList = contentService.showLatestKContent(newsnum);
+		contentList = contentService.showAllContent();
+		newsnum = contentList.size();
 		
 		return SUCCESS;
-	}
-	
-	public List<ContentModel> getContentList() 
-	{
-		return contentList;
-	}
-
-	public void setContentList(List<ContentModel> contentList) 
-	{
-		this.contentList = contentList;
 	}
 	
 	public int getNewsnum() 
@@ -47,5 +37,15 @@ public class IndexAction extends ActionSupport
 	public void setNewsnum(int newsnum) 
 	{
 		this.newsnum = newsnum;
+	}
+
+	public List<ContentModel> getContentList() 
+	{
+		return contentList;
+	}
+
+	public void setContentList(List<ContentModel> contentList) 
+	{
+		this.contentList = contentList;
 	}
 }

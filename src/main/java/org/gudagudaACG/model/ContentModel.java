@@ -7,8 +7,8 @@ import javax.persistence.Id;
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity
-public class ContentModel {
-	
+public class ContentModel implements Comparable
+{	
 	@Id
     @GeneratedValue(generator = "id")
     @GenericGenerator(name = "id", strategy = "native")
@@ -103,5 +103,14 @@ public class ContentModel {
 
 	public void setQuote(String quote) {
 		this.quote = quote;
+	}
+	
+	@Override
+	public int compareTo(Object o)
+	{
+		ContentModel sdto = (ContentModel)o;
+	    String otherdate = sdto.getDate();
+	    
+	    return this.date.compareTo(otherdate);
 	}
 }
