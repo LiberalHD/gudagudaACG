@@ -52,8 +52,17 @@
 						<img src="styles/images/girl.png"/>
 					</div>
 					
-					<div class="div_news" align="right">
-						<a href="<s:url action='allContent'/>" >显示全部</a><br/>
+					<div class="div_news" align="center">
+						<div class="div_new_0" align="left" >
+							<img src="styles/images/newsbg.png" width="100%"/>
+						</div>
+						
+						<div class="div_new_0_5" align="left" >
+							<p align="right">
+								<br/><a href="<s:url action='allContent'/>" >显示全部</a>
+							</p>
+						</div>
+							
 						<% int i = 0;%>
 						<s:iterator value="contentList" status="i">
 							<% if(i % 2 != 0){%>

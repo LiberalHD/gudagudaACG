@@ -123,11 +123,36 @@ body
 {
 	margin:20px 0px 0px 0px;
 	
-	width: 70%;
+	width: 80%;
 	
 	position: relative;
 	top:0px;
-	left: 15%;
+	left: 10%;
+	right: auto;
+	bottom: auto;
+}
+
+.div_new_0
+{
+	margin:20px 0px 0px 0px;
+	
+	width: 100%;
+	
+	position: absolute;
+	top:0px;
+	left: 0px;
+	right: auto;
+	bottom: auto;
+}
+
+.div_new_0_5
+{
+	height: 100px;
+	width: 100%;
+	
+	position: relative;
+	top:0px;
+	left: 0px;
 	right: auto;
 	bottom: auto;
 }
@@ -136,11 +161,11 @@ body
 {
 	margin:20px 0px 0px 0px;
 	
-	width: 100%;
+	width: 70%;
 	
 	position: relative;
 	top:0px;
-	left: 0px;
+	left: 15%;
 	right: auto;
 	bottom: auto;
 	
@@ -151,11 +176,11 @@ body
 {
 	margin:20px 0px 0px 0px;
 	
-	width: 100%;
+	width: 70%;
 	
 	position: relative;
 	top:0px;
-	left: 0px;
+	left: 15%;
 	right: auto;
 	bottom: auto;
 	

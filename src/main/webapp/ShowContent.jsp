@@ -30,7 +30,7 @@
 				
 				<div class="div_content" align="center">
 					<h1>gudagudaACG</h1>
-	    
+	    			
 				    <table>
 			            <tr align="left">
 			            	<td colspan="3"><s:property value="contentModel.title" /></td>
@@ -43,9 +43,10 @@
 						</tr>
 						
 			            <tr align="left">
-			            	<td colspan="3"><s:property value="contentModel.content" /></td>
+							<td colspan="3">
+								<s:property value="contentModel.content" />
+							</td>
 						</tr>
-						
 						<tr align="left">
 			            	<td colspan="3"><s:property value="contentModel.quote" /></td>
 						</tr>
@@ -57,7 +58,7 @@
 				</div>
 				
 				<div class="div_right" align="left">
-				
+					
 				</div>
 			</div>
 			
