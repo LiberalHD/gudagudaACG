@@ -1,4 +1,0 @@
-0:0:0:0:0:0:0:1 -  -  [26/七月/2017:11:58:33 +0800] "GET /gudagudaACG/index.action HTTP/1.1" 200 2775 
-0:0:0:0:0:0:0:1 -  -  [26/七月/2017:11:58:34 +0800] "GET /gudagudaACG/styles/styles.css HTTP/1.1" 200 103 
-0:0:0:0:0:0:0:1 -  -  [26/七月/2017:11:58:34 +0800] "GET /gudagudaACG/styles/images/index_background.png HTTP/1.1" 404 1411 
-0:0:0:0:0:0:0:1 -  -  [26/七月/2017:11:58:34 +0800] "GET /favicon.ico HTTP/1.1" 200 1150 

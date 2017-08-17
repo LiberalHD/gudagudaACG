@@ -9,10 +9,10 @@
 		<welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
 	
-	<!-- Struts Configuration -->
-	<filter>
+	<!-- Struts Configuration org.apache.struts2.dispatcher.filter.StrutsPrepareAndExecuteFilter-->
+    <filter>
 		<filter-name>struts2</filter-name>
-		<filter-class>org.apache.struts2.dispatcher.filter.StrutsPrepareAndExecuteFilter</filter-class>
+		<filter-class>org.gudagudaACG.filter.GudagudaFilter</filter-class>
     </filter>
 
     <filter-mapping>

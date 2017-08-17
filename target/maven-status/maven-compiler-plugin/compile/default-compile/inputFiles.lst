@@ -4,5 +4,6 @@ D:\gudaguda\workspace\gudagudaACG\src\main\java\org\gudagudaACG\model\ContentMod
 D:\gudaguda\workspace\gudagudaACG\src\main\java\org\gudagudaACG\service\ContentService.java
 D:\gudaguda\workspace\gudagudaACG\src\main\java\org\gudagudaACG\dao\ContentDao.java
 D:\gudaguda\workspace\gudagudaACG\src\main\java\org\gudagudaACG\action\SaveContentAction.java
+D:\gudaguda\workspace\gudagudaACG\src\main\java\org\gudagudaACG\filter\GudagudaFilter.java
 D:\gudaguda\workspace\gudagudaACG\src\main\java\org\gudagudaACG\action\ShowContentAction.java
 D:\gudaguda\workspace\gudagudaACG\src\main\java\org\gudagudaACG\service\impl\ContentServiceImpl.java

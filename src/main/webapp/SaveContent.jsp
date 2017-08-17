@@ -15,6 +15,10 @@
     	<meta http-equiv="expires" content="0">      
     	
     	<link rel="stylesheet" type="text/css" href="styles/SaveContent.css">
+    	
+		<script type="text/javascript" src="ueditor/ueditor.config.js"></script>  
+		<script type="text/javascript" src="ueditor/ueditor.all.js"></script>  
+		<link rel="stylesheet" type="text/css" href="udeditor/themes/default/css" />
 		
 		<title>新闻发布页面</title>
 	</head>
@@ -34,38 +38,52 @@
 				<div class="div_content" align="center">
 					<s:form action="saveContentForm" method="post" theme="simple">
 					<div class="div_edit" align="left">
-						<h2 align="center">填写下方表单发布新闻。</h2>
-				        <table>
+						<p align="center">填写下方表单发布新闻。</p>
+				        <table border="1">
 				            <tr>
-				                <th>文章标题</th>
+				                <th>文章标题<br/>（注意：此项必填。）</th>
 				                <td><s:textfield name="contentModel.title"/></td>
+				            </tr>
+				            <tr>
 				                <td><font color="red"><s:fielderror fieldName="contentModel.title"/></font></td>
 				            </tr>
+				            
 				            <tr>
-				                <th>作者</th>
+				                <th>作者<br/>（注意：此项必填。）</th>
 				                <td><s:textfield name="contentModel.author"/></td>
+				            </tr>
+				            <tr>
 				                <td><font color="red"><s:fielderror fieldName="contentModel.author"/></font></td>
 				            </tr>
+				            
 				            <tr>
-				                <th>发布日期（yyyy-mm-dd）</th>
+				                <th>发布日期<br/>（注意：格式为yyyy-mm-dd。此项必填。）</th>
 				                <td><s:textfield name="contentModel.date"/></td>
+				            </tr>
+				            <tr>
 				                <td><font color="red"><s:fielderror fieldName="contentModel.date"/></font></td>
 				            </tr>
+				            
 				            <tr>
-				                <th>关键字（不同关键字用空格隔开）</th>
+				                <th>关键字<br/>（注意：不同关键字用空格隔开。）</th>
 				                <td><s:textfield name="contentModel.keywords"/></td>
+				            </tr>
+				            <tr>
 				                <td><font color="red"><s:fielderror fieldName="contentModel.keywords"/></font></td>
 				            </tr>
+				            
 				            <tr>
-				                <th>引用URL（不同URL用空格隔开）</th>
+				                <th>引用URL<br/>（注意：不同URL用空格隔开。）</th>
 				                <td><s:textfield name="contentModel.quote"/></td>
+				            </tr>
+				            <tr>
 				                <td><font color="red"><s:fielderror fieldName="contentModel.quote"/></font></td>
 				            </tr>
+				            
 				            <tr align="center">
 				                <th colspan="2">
-				                    <s:submit value="Submit"/>
+				                    <s:submit value="提交"/>
 				                </th>
-				                <th> </th>
 				            </tr>
 				        </table>
 						<s:actionmessage/>
@@ -77,8 +95,13 @@
 					
 					<div class="div_text" align="center">
 						<p align="left"> 正文</p>
-						<s:textarea name="contentModel.content" cssStyle="width:90%; height:1000px"/>
+						<s:textarea id="newsEditor" name="contentModel.content" cssStyle="width:90%; height:1000px"/>
 						<font color="red"><s:fielderror fieldName="contentModel.content"/></font>
+							
+						<script type="text/javascript">  
+							UE.getEditor('newsEditor');  
+							// var content = UE.getPlainTxt();//content就是编辑器的带格式的内容  
+						</script>    
 					</div>
 					
 					</s:form>

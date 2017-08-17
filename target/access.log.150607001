@@ -1,9 +1,0 @@
-0:0:0:0:0:0:0:1 -  -  [12/七月/2017:14:59:26 +0800] "GET /gudagudaACG/ HTTP/1.1" 200 1935 
-0:0:0:0:0:0:0:1 -  -  [12/七月/2017:14:59:27 +0800] "GET /favicon.ico HTTP/1.1" 200 1150 
-0:0:0:0:0:0:0:1 -  -  [12/七月/2017:14:59:29 +0800] "GET /gudagudaACG/ HTTP/1.1" 200 1935 
-0:0:0:0:0:0:0:1 -  -  [12/七月/2017:14:59:29 +0800] "GET /favicon.ico HTTP/1.1" 200 1150 
-0:0:0:0:0:0:0:1 -  -  [12/七月/2017:14:59:32 +0800] "GET /gudagudaACG/test.action?userName=hd+params HTTP/1.1" 200 2071 
-0:0:0:0:0:0:0:1 -  -  [12/七月/2017:14:59:36 +0800] "GET /gudagudaACG/register.jsp HTTP/1.1" 200 1726 
-0:0:0:0:0:0:0:1 -  -  [12/七月/2017:14:59:43 +0800] "POST /gudagudaACG/register.action HTTP/1.1" 200 2379 
-0:0:0:0:0:0:0:1 -  -  [12/七月/2017:14:59:50 +0800] "GET /gudagudaACG/register.jsp HTTP/1.1" 200 1726 
-0:0:0:0:0:0:0:1 -  -  [12/七月/2017:15:04:03 +0800] "POST /gudagudaACG/product_save.action HTTP/1.1" 200 2150 

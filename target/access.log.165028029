@@ -1,3 +1,0 @@
-0:0:0:0:0:0:0:1 -  -  [12/ÆßÔÂ/2017:16:21:55 +0800] "GET /gudagudaACG/index.action HTTP/1.1" 200 1935 
-0:0:0:0:0:0:0:1 -  -  [12/ÆßÔÂ/2017:16:22:00 +0800] "POST /gudagudaACG/product_save.action HTTP/1.1" 200 2080 
-0:0:0:0:0:0:0:1 -  -  [12/ÆßÔÂ/2017:16:50:08 +0800] "POST /gudagudaACG/product_save.action HTTP/1.1" 503 1318 

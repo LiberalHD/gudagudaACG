@@ -2,7 +2,14 @@ body
 {
 	font-size: 25px;
 	color: #000000;
-	font-family: "HYZhuZiTongNianTiW Regular","Microsoft Yahei", "STHupo",  
+	font-family: "Microsoft Yahei", "STHupo", "HYZhuZiTongNianTiW Regular", 
+}
+
+th
+{
+	font-size: 15px;
+	color: #000000;
+	font-family: "Microsoft Yahei", "STHupo", "HYZhuZiTongNianTiW Regular", 
 }
 
 .div_body

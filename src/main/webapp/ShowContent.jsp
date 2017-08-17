@@ -44,9 +44,10 @@
 						
 			            <tr align="left">
 							<td colspan="3">
-								<s:property value="contentModel.content" />
+								<s:property value="contentModel.content" escapeHtml="false"/>
 							</td>
 						</tr>
+						
 						<tr align="left">
 			            	<td colspan="3"><s:property value="contentModel.quote" /></td>
 						</tr>

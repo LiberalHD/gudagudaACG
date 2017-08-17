@@ -42,7 +42,6 @@ public class ContentServiceImpl implements ContentService
 		return contentList.get(0);
     }
     
-    
 	@Override
    	public List<ContentModel> showLatestKContent(int k)
    	{

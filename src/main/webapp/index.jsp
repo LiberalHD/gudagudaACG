@@ -34,18 +34,51 @@
 						<div id="box_wwwzzjsnet">
 				  			<div class="list">
 						        <ul>
-						            <li><img src="styles/images/banner1.jpeg" width="100%" height="500" /></li>
-						            <li><img src="styles/images/banner2.jpg" width="100%" height="500" /></li>
-						            <li><img src="styles/images/banner3.jpg" width="100%" height="500" /></li>
-						            <li><img src="styles/images/banner4.jpg" width="100%" height="500" /></li>
-						            <li><img src="styles/images/banner5.jpg" width="100%" height="500" /></li>
-						            <li><img src="styles/images/banner6.jpg" width="100%" height="500" /></li>
+						            <li>
+						            	<a href="https://tieba.baidu.com/f?kw=%E5%91%BD%E8%BF%90%E5%86%A0%E4%BD%8D%E6%8C%87%E5%AE%9A&fr=index&fp=0&ie=utf-8" >
+						            		<img src="styles/images/banner1.jpeg" width="100%" height="500" />
+						            	</a>
+						            </li>
+						            
+						            <li>
+						            	<a href="https://tieba.baidu.com/f?kw=%E5%91%BD%E8%BF%90%E5%86%A0%E4%BD%8D%E6%8C%87%E5%AE%9A&fr=index&fp=0&ie=utf-8" >
+						            		<img src="styles/images/banner2.jpg" width="100%" height="500" />
+						            	</a>
+						            </li>
+						            
+						            <li>
+						            	<a href="https://tieba.baidu.com/f?kw=%E5%91%BD%E8%BF%90%E5%86%A0%E4%BD%8D%E6%8C%87%E5%AE%9A&fr=index&fp=0&ie=utf-8" >
+						            		<img src="styles/images/banner3.jpg" width="100%" height="500" />
+						            	</a>
+						            </li>
+						            
+						            <li>
+						            	<a href="https://tieba.baidu.com/f?kw=%E5%91%BD%E8%BF%90%E5%86%A0%E4%BD%8D%E6%8C%87%E5%AE%9A&fr=index&fp=0&ie=utf-8" >
+						            		<img src="styles/images/banner4.jpg" width="100%" height="500" />
+						            	</a>
+						            </li>
+						            
+						            <li>
+						            	<a href="https://tieba.baidu.com/f?kw=%E5%91%BD%E8%BF%90%E5%86%A0%E4%BD%8D%E6%8C%87%E5%AE%9A&fr=index&fp=0&ie=utf-8" >
+						            		<img src="styles/images/banner5.jpg" width="100%" height="500" />
+						            	</a>
+						            </li>
+						            
+						            <li>
+						            	<a href="https://tieba.baidu.com/f?kw=%E5%91%BD%E8%BF%90%E5%86%A0%E4%BD%8D%E6%8C%87%E5%AE%9A&fr=index&fp=0&ie=utf-8" >
+						            		<img src="styles/images/banner6.jpg" width="100%" height="500" />
+						            	</a>
+						            </li>
 						        </ul>
-						        <div class="div_banner_title" align="left">
-						        	<font size = 10pt color=#ffffff>&nbsp;近期新闻。 </font>
-						        </div>
 						    </div>
+						    <div class="div_banner_title" align="left">
+					        	<font size = 10pt color=#ffffff>&nbsp;近期新闻。 </font>
+					        </div>
 			  			</div>
+					</div>
+					
+					<div class="div_logo" align="left">
+						<img src="styles/images/girl.png"/>
 					</div>
 					
 					<div class="div_logo" align="left">
