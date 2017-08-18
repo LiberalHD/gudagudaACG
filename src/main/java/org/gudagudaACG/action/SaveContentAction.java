@@ -19,20 +19,11 @@ public class SaveContentAction extends ActionSupport
 	
 	private ContentModel contentModel;
 
-	public ContentModel getContentModel() 
-	{
-		return contentModel;
-	}
-
-	public void setContentModel(ContentModel contentModel) 
-	{
-		this.contentModel = contentModel;
-	}
-
-	public String saveContent()
+	public String execute()
 	{       
         if (contentModel != null)
         {
+        	
         	contentService.saveContent(contentModel);
         }
         
@@ -43,19 +34,33 @@ public class SaveContentAction extends ActionSupport
 	{
 	    if (contentModel.getTitle().length() == 0) 
 	    {
-	        addFieldError("contentModel.title", "文章标题不能为空。");
+	        addFieldError("contentModel.title", "Can't be NUll。");
+	    }
+	    if (contentModel.getImage().length() == 0) 
+	    {
+	        addFieldError("contentModel.image", "Can't be NUll。");
 	    }
 	    if (contentModel.getAuthor().length() == 0) 
 	    {
-	        addFieldError("contentModel.author", "作者不能为空.");
+	        addFieldError("contentModel.author", "Can't be NUll。");
 	    }
 	    if (contentModel.getDate().length() < 10) 
 	    {
-	        addFieldError("contentModel.date", "日期格式错误");
+	        addFieldError("contentModel.date", "Format error.");
 	    }
 	    if (contentModel.getKeywords().length() == 0) 
 	    {
-	        addFieldError("contentModel.keywords", "关键字不能为空");
+	        addFieldError("contentModel.keywords", "Can't be NUll。");
 	    }
+	}
+	
+	public ContentModel getContentModel() 
+	{
+		return contentModel;
+	}
+
+	public void setContentModel(ContentModel contentModel) 
+	{
+		this.contentModel = contentModel;
 	}
 }

@@ -58,4 +58,11 @@ public class ContentServiceImpl implements ContentService
    		
    		return contentList;
    	}
+	
+	@Override
+    public void deleteContentByID(int id)
+    {
+    	String queryString = "from ContentModel contentModel where id='" + id + "'";
+		contentDao.deleteContent(queryString);
+    }
 }

@@ -1,6 +1,6 @@
 body
 {
-	font-size: 25px;
+	font-size: 30px;
 	color: #000000;
 	font-family: "Microsoft Yahei", "STHupo", "HYZhuZiTongNianTiW Regular", 
 }
@@ -81,6 +81,22 @@ body
 	bottom: auto;
 }
 
+.div_dialog
+{
+	width: 100%;
+	height: 30px;
+	
+	position: relative;
+	top:0px;
+	left: 0px;
+	right: auto;
+	bottom: auto;
+	
+	font-size: 30px;
+	color: #000000;
+	font-family: "HYZhuZiTongNianTiW Regular", "Microsoft Yahei", "STHupo", 
+}
+
 .div_content
 {
 	margin:0px 370px 0px 370px;
@@ -94,11 +110,20 @@ body
 	bottom: auto;
 }	
 	
+.div_links
+{
+	width: 400px;
+	height: 100px;
 	
+	position: relative;
+	top:50px;
+	left: 800px;
+	right: auto;
+	bottom: auto; 
 	
-	
-	
-	
-	
+	font-size: 30px;
+	color: #000000;
+	font-family: "HYZhuZiTongNianTiW Regular", "Microsoft Yahei", "STHupo", 
+}
 	
 	

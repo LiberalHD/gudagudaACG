@@ -12,4 +12,6 @@ public interface ContentService
 	ContentModel showOneContent(String title);
 	
 	List<ContentModel> showLatestKContent(int k);
+	
+	void deleteContentByID(int id);
 }

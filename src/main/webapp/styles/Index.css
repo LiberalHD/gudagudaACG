@@ -1,6 +1,6 @@
 body
 {
-	font-size: 25px;
+	font-size: 30px;
 	color: #000000;
 	font-family: "HYZhuZiTongNianTiW Regular", "Microsoft Yahei", "STHupo"
 }
@@ -25,6 +25,18 @@ body
 	bottom: auto;
 	
 	background-image: url(images/header.png);
+}
+
+.div_dialog
+{
+	width: 100%;
+	height: 50px;
+	
+	position: relative;
+	top:0px;
+	left: 0px;
+	right: auto;
+	bottom: auto;
 }
 
 .div_middle
@@ -96,6 +108,8 @@ body
 
 .div_logo
 {
+	margin:50px 0px 0px 0px;
+	
 	width: 600px;
 	height: 700px;
 	
@@ -110,7 +124,58 @@ body
 {
 	margin:0px 0px 0px 620px;
 	
-	height: 700px;
+	height: 500px;
+	
+	position: relative;
+	top:0px;
+	left: 0px;
+	right: auto;
+	bottom: auto;
+}
+
+.div_adver_0
+{
+	margin:40px 0px 0px 420px;
+	
+	position: relative;
+	top:0px;
+	left: 0px;
+	right: auto;
+	bottom: auto;
+}
+
+.div_adver_0_inner
+{
+	float: left;
+	margin:50px 0px 0px 100px;
+	
+	width: 100%;
+	
+	position: absolute;
+	top:0px;
+	left: 0px;
+	right: auto;
+	bottom: auto;
+}
+
+.div_adver_1
+{
+	margin:20px 0px 0px 0px;
+	
+	width: 100%;
+	
+	position: relative;
+	top:0px;
+	left: 0px;
+	right: auto;
+	bottom: auto;
+}
+
+.div_adver_2
+{
+	margin:20px 0px 0px 0px;
+	
+	width: 100%;
 	
 	position: relative;
 	top:0px;
@@ -123,11 +188,11 @@ body
 {
 	margin:20px 0px 0px 0px;
 	
-	width: 80%;
+	width: 100%;
 	
 	position: relative;
 	top:0px;
-	left: 10%;
+	left: 0px;
 	right: auto;
 	bottom: auto;
 }
@@ -187,6 +252,100 @@ body
 	background-color: #b0c6f9;
 }
 
+.div_images
+{
+	margin:20px 0px 0px 0px;
+	
+	width: 100%;
+	
+	position: relative;
+	top:0px;
+	left: 0px;
+	right: auto;
+	bottom: auto;
+}
+
+.div_image_0
+{
+	margin:20px 0px 0px 0px;
+	
+	width: 100%;
+	
+	position: absolute;
+	top:0px;
+	left: 0px;
+	right: auto;
+	bottom: auto;
+}
+
+.div_image_0_5
+{
+	height: 100px;
+	width: 100%;
+	
+	position: relative;
+	top:0px;
+	left: 0px;
+	right: auto;
+	bottom: auto;
+}
+
+.div_image_outer
+{
+	margin:0px 0px 0px 0px;
+	
+	width: 100%;
+	
+	position: relative;
+	top:0px;
+	left: 15%;
+	right: auto;
+	bottom: auto;
+}
+
+.div_image_row
+{
+	margin:20px 0px 0px 0px;
+	
+	width: 100%;
+	
+	position: relative;
+	top:0px;
+	left: 0px;
+	right: auto;
+	bottom: auto;
+}
+
+.div_image_1
+{
+	margin:20px 0px 0px 0px;
+	
+	width: 42%;
+	
+	position: relative;
+	top:0px;
+	left: 15%;
+	right: auto;
+	bottom: auto;
+	
+	background-color: #ffffff;
+}
+
+.div_image_2
+{
+	margin:20px 0px 0px 0px;
+	
+	width: 42%;
+	
+	position: relative;
+	top:0px;
+	left: 15%;
+	right: auto;
+	bottom: auto;
+	
+	background-color: #b0c6f9;
+}
+
 .div_links
 {
 	width: 400px;
@@ -199,16 +358,28 @@ body
 	bottom: auto; 
 }
 
+.div_banner_img
+{
+	width: 100%;
+	height: 500px;
+	
+	position: relative;
+	top: 0px;
+	left: 0px;
+	right: auto;
+	bottom: auto;
+}
+
 .div_banner_title
 {
 	width: 100%;
-	height: 60px;
+	height: 50px;
 	
 	position: absolute;
 	top:auto;
 	left: 0px;
 	right: auto;
-	bottom: 0px;; 
+	bottom: 0px;
 	
 	background-color: #000000;
 	opacity:0.6;

@@ -14,7 +14,7 @@
 		
 		<link rel="stylesheet" type="text/css" href="styles/ShowContent.css">
 		
-		<title>新闻内容页</title>
+		<title>gudagudaACG</title>
 	</head>
 	
 	<body>
@@ -29,33 +29,32 @@
 				</div>
 				
 				<div class="div_content" align="center">
-					<h1>gudagudaACG</h1>
+					<div class="div_dialog" align="left">
+						当前位置： <a href="<s:url action='index' />" >首页</a> -> 新闻内容<br/>
+					</div>
 	    			
-				    <table>
-			            <tr align="left">
-			            	<td colspan="3"><s:property value="contentModel.title" /></td>
+				    <table style="table-layout:fixed;" width=100%>
+			            <tr align="center">
+			            	<td colspan="3"><h2><s:property value="contentModel.title" /></h2><hr/></td>
 			            </tr>
 			            
 			            <tr align="left">
-			            	<td><s:property value="contentModel.author" /></td>
-			            	<td><s:property value="contentModel.date" /></td>
-			            	<td><s:property value="contentModel.keywords" /></td>
+			            	<td>作者：<s:property value="contentModel.author" /></td>
+			            	<td>日期：<s:property value="contentModel.date.substring(0, 10)" /></td>
+			            	<td>标签：<s:property value="contentModel.keywords" /></td>
 						</tr>
 						
 			            <tr align="left">
 							<td colspan="3">
-								<s:property value="contentModel.content" escapeHtml="false"/>
+								<hr/><s:property value="contentModel.content" escapeHtml="false"/>
 							</td>
 						</tr>
 						
 						<tr align="left">
-			            	<td colspan="3"><s:property value="contentModel.quote" /></td>
+			            	<td colspan="3"><hr/>引用链接：<s:property value="contentModel.quote" /></td>
 						</tr>
 			        </table>
 			        
-			        <p>
-						<a href="<s:url action='index' />" >返回首页</a>
-					</p>
 				</div>
 				
 				<div class="div_right" align="left">
@@ -64,7 +63,12 @@
 			</div>
 			
 			<div class="div_bottom" align="left">
-				
+				<div class="div_links" align="left">
+					<p>
+						<a href="https://liberalhd.github.io/" >个人主页</a><br/>
+						<a href="<s:url action='test' />" >测试页面</a><br/>
+					</p>
+				</div>
 			</div>
 		</div>
 	        

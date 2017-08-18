@@ -12,7 +12,7 @@
     	<meta http-equiv="cache-control" content="no-cache">  
     	<meta http-equiv="expires" content="0">      
     	
-    	<link rel="stylesheet" type="text/css" href="styles/Index.css">
+    	<link rel="stylesheet" type="text/css" href="styles/AllContent.css">
 		
 		<title>gudagudaACG</title>
 	</head>
@@ -29,42 +29,49 @@
 				</div>
 				
 				<div class="div_content" align="left">
+					<div class="div_dialog" align="left">
+				        	当前位置： <a href="<s:url action='index' />" >首页</a> -> 全部新闻<br/>
+					</div>
+				
 					<div class="div_news" align="left">
 						<p align = "right">
 				        	总新闻数：<s:property value="newsnum" />
 				        </p>
 					
-						<% int i = 0;%>
+						<%int i = 0;%>
 						<s:iterator value="contentList" status="i">
 							<% if(i % 2 != 0){%>
 							<div class="div_new_1" align="left">
 							<% }else{%>
 							<div class="div_new_2" align="left">
 							<% }i ++;%>
-								<table>
-						            <tr align="center">
-						            	<td colspan="3">近期新闻 </td>
-						            </tr>
-						            <tr align="center">
-						            	<td>标题</td>
-						            	<td>作者</td>
-						            	<td>日期</td>
-									</tr>
-						            <tr align="center">
-						            	<td>
-						            		<a href="<s:url action='showContent'><s:param name="title" value="title"/></s:url>">
-						            			<s:property value="title" />
+								<table border= "1" style="table-layout:fixed;" width=100%>
+						            <tr align="left">
+										<td rowspan=2 width="25%">
+											<a style="text-decoration:none" href="<s:url action='showContent'><s:param name="title" value="title"/></s:url>">
+						            			<s:property escapeHtml="false" value="image" />
 						            		</a>
 						            	</td>
-						            	<td><s:property value="author" /></td>
-						            	<td><s:property value="date" /></td>
+										<td style="word-wrap:break-word">
+											<a style="text-decoration:none" href="<s:url action='showContent'><s:param name="title" value="title"/></s:url>">
+						            			<s:property value="title" /><br/>
+						            		</a>
+										</td>
+										<td style="word-wrap:break-word">
+						            		作者：<s:property value="author" /><br/>
+										</td>
+										<td style="word-wrap:break-word">
+						            		日期：<s:property value="date" /><br/>
+										</td>
+									</tr>
+									<tr align="left" height="70%">
+										<td style="word-wrap:break-word" colspan=3>
+											<s:property value="abstractstr" />
+										</td>
 									</tr>
 						        </table>
 							</div>
 				        </s:iterator>
-				        <p align="center">
-				        	<a href="<s:url action='index' />" >返回主页</a><br/>
-				        </p>
 					</div>
 				</div>
 				

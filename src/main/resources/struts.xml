@@ -10,16 +10,24 @@
             <result name="success">/Index.jsp</result>
         </action>
         
-        <action name="saveContent">
-            <result name="success">/SaveContent.jsp</result>
-        </action>
-        
         <action name="showContent" class="showContentAction">
             <result name="success">/ShowContent.jsp</result>
         </action>
         
         <action name="allContent" class="allContentAction">
             <result name="success">/AllContent.jsp</result>
+        </action>
+        
+        <action name="showImage" class="showImageAction">
+            <result name="success">/ShowImage.jsp</result>
+        </action>
+        
+        <action name="allImage" class="allImageAction">
+            <result name="success">/AllImage.jsp</result>
+        </action>
+        
+        <action name="saveContent">
+            <result name="success">/SaveContent.jsp</result>
         </action>
         
         <action name="test">
@@ -30,8 +38,38 @@
 
 	<package name="form" extends="struts-default" namespace="/">
 		
-        <action name="saveContentForm" class="saveContentAction" method="saveContent">
-            <result name="success">/SaveContent.jsp</result>
+        <action name="saveContentForm" class="saveContentAction">
+			<result name="success" type="redirectAction">
+				<param name="actionName">index</param>
+			</result>
+            <result name="input">/SaveContent.jsp</result>
+        </action>
+        
+        <action name="saveImageForm" class="saveImageAction">
+			<result name="success" type="redirectAction">
+				<param name="actionName">index</param>
+			</result>
+            <result name="input">/SaveContent.jsp</result>
+        </action>
+        
+        <action name="saveBannerForm" class="saveBannerAction">
+			<result name="success" type="redirectAction">
+				<param name="actionName">index</param>
+			</result>
+            <result name="input">/SaveContent.jsp</result>
+        </action>
+        
+        <action name="saveAdvertisementForm" class="saveAdvertisementAction">
+			<result name="success" type="redirectAction">
+				<param name="actionName">index</param>
+			</result>
+            <result name="input">/SaveContent.jsp</result>
+        </action>
+        
+        <action name="saveParasForm" class="saveParasAction">
+			<result name="success" type="redirectAction">
+				<param name="actionName">index</param>
+			</result>
             <result name="input">/SaveContent.jsp</result>
         </action>
         

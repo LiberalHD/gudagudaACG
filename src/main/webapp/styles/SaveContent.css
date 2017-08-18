@@ -1,12 +1,5 @@
 body
 {
-	font-size: 25px;
-	color: #000000;
-	font-family: "Microsoft Yahei", "STHupo", "HYZhuZiTongNianTiW Regular", 
-}
-
-th
-{
 	font-size: 15px;
 	color: #000000;
 	font-family: "Microsoft Yahei", "STHupo", "HYZhuZiTongNianTiW Regular", 
@@ -34,12 +27,28 @@ th
 	background-image: url(images/header.png);
 }
 
+.div_dialog
+{
+	width: 100%;
+	height: 50px;
+	
+	position: relative;
+	top:0px;
+	left: 0px;
+	right: auto;
+	bottom: auto;
+	
+	font-size: 30px;
+	color: #000000;
+	font-family: "HYZhuZiTongNianTiW Regular", "Microsoft Yahei", "STHupo", 
+}
+
 .div_middle
 {
 	margin:20px 0px 20px 0px;
 	
 	width: 100%;
-	height: 2000px;
+	height: auto;
 	
 	position: relative;
 	top:0px;
@@ -101,13 +110,78 @@ th
 	bottom: auto;
 }	
 
+.div_savecontent
+{
+	margin:20px 0px 0px 0px;
+	
+	width: 100%;
+	
+	position: relative;
+	top:0px;
+	left: 0px;
+	right: auto;
+	bottom: auto;
+}
+
+.div_saveimage
+{
+	margin:20px 0px 0px 0px;
+	
+	width: 100%;
+	
+	position: relative;
+	top:0px;
+	left: 0px;
+	right: auto;
+	bottom: auto;
+}
+
+.div_savebanner
+{
+	margin:20px 0px 0px 0px;
+	
+	width: 100%;
+	
+	position: relative;
+	top:0px;
+	left: 0px;
+	right: auto;
+	bottom: auto;
+}
+
+.div_saveadver
+{
+	margin:20px 0px 0px 0px;
+	
+	width: 100%;
+	
+	position: relative;
+	top:0px;
+	left: 0px;
+	right: auto;
+	bottom: auto;
+}
+
+.div_saveparas
+{
+	margin:20px 0px 0px 0px;
+	
+	width: 100%;
+	
+	position: relative;
+	top:0px;
+	left: 0px;
+	right: auto;
+	bottom: auto;
+}
+
 .div_edit
 {
-	width: 400px;
+	width: 700px;
 	height: 100%;
 	
 	position: absolute;
-	top:0px;
+	top:60px;
 	left: 0px;
 	right: auto;
 	bottom: auto;
@@ -115,7 +189,7 @@ th
 
 .div_text
 {
-	margin:0px 0px 0px 420px;
+	margin:-80px 0px 0px 720px;
 	
 	height: 100%;
 	
@@ -125,3 +199,19 @@ th
 	right: auto;
 	bottom: auto;
 }	
+
+.div_links
+{
+	width: 400px;
+	height: 100px;
+	
+	position: relative;
+	top:50px;
+	left: 800px;
+	right: auto;
+	bottom: auto; 
+	
+	font-size: 30px;
+	color: #000000;
+	font-family: "HYZhuZiTongNianTiW Regular", "Microsoft Yahei", "STHupo", 
+}
