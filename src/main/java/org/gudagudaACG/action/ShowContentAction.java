@@ -4,6 +4,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import com.opensymphony.xwork2.ActionSupport;
 import org.springframework.beans.factory.annotation.Autowired;
+import java.util.List;
 
 import org.gudagudaACG.model.ContentModel;
 import org.gudagudaACG.service.ContentService;
@@ -19,6 +20,7 @@ public class ShowContentAction extends ActionSupport
 	
 	private ContentModel contentModel;
 	private String title;
+	private List<String> links;
 	
 	public ContentModel getContentModel() 
 	{
@@ -40,9 +42,18 @@ public class ShowContentAction extends ActionSupport
 		this.title = title;
 	}
 
+	public List<String> getLinks() {
+		return links;
+	}
+
+	public void setLinks(List<String> links) {
+		this.links = links;
+	}
+
 	public String execute()
 	{
 		contentModel = contentService.showOneContent(title);
+		links = contentService.parseLinks(contentModel.getQuote());
 		
 		return SUCCESS;
 	}

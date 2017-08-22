@@ -51,10 +51,18 @@
 						</tr>
 						
 						<tr align="left">
-			            	<td colspan="3"><hr/>引用链接：<s:property value="contentModel.quote" /></td>
+			            	<td colspan="3"><hr/><p>引用链接：</p>
+			            		<s:iterator value="links" status="i">
+			            			<p>
+			            				&nbsp;&nbsp;&nbsp;&nbsp;
+				            			<a href=<s:property/> >
+					            			<s:property/>
+					            		</a>
+				            		</p>
+			            		</s:iterator>
+			            	</td>
 						</tr>
 			        </table>
-			        
 				</div>
 				
 				<div class="div_right" align="left">

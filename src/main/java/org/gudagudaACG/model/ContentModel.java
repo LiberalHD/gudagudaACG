@@ -19,9 +19,6 @@ public class ContentModel implements Comparable
     private String title;
 	
 	@Column
-    private String image;
-	
-	@Column
     private String author;
 	
 	@Column
@@ -38,6 +35,9 @@ public class ContentModel implements Comparable
 	
 	@Column
     private String abstractstr;
+	
+	@Column
+    private String image;
 	
 	public ContentModel() {
 		

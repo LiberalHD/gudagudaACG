@@ -72,13 +72,8 @@
 					                <td><font color="red"><s:fielderror fieldName="contentModel.quote"/></font></td>
 					            </tr>
 					            <tr align="center">
-					                <td>预览图<br/>（注意：此项必填。）<br/><br/></td>
-					                <td><s:textfield name="contentModel.image"/></td>
-					                <td><font color="red"><s:fielderror fieldName="contentModel.image"/></font></td>
-					            </tr>
-					            <tr align="center">
 					                <td>文章摘要<br/>（注意：摘要为纯文本。）<br/><br/></td>
-					                <td><s:textarea name="contentModel.abstractstr" cssStyle="width:80%; height:200px"/></td>
+					                <td><s:textarea name="contentModel.abstractstr" cssStyle="width:80%; height:280px"/></td>
 					                <td><font color="red"><s:fielderror fieldName="contentModel.abstractstr"/></font></td>
 					            </tr>
 					            <tr align="center">
@@ -135,11 +130,6 @@
 					                <td><font color="red"><s:fielderror fieldName="imageModel.quote"/></font></td>
 					            </tr>
 					            <tr align="center">
-					                <td>预览图<br/>（注意：此项必填。）<br/><br/></td>
-					                <td><s:textfield name="imageModel.image"/></td>
-					                <td><font color="red"><s:fielderror fieldName="imageModel.image"/></font></td>
-					            </tr>
-					            <tr align="center">
 					                <td colspan="3">
 					                    <hr/><s:submit value="发布"/>
 					                </td>
@@ -149,7 +139,7 @@
 						</div>
 						
 						<div class="div_text" align="left">
-							<s:textarea id="imageEditor" name="imageModel.content" cssStyle="width:100%; height:420px"/>
+							<s:textarea id="imageEditor" name="imageModel.content" cssStyle="width:100%; height:380px"/>
 							<font color="red"><s:fielderror fieldName="imageModel.content"/></font>
 								
 							<script type="text/javascript">  
@@ -216,19 +206,14 @@
 					                <td><font color="red"><s:fielderror fieldName="advertisementModel.date"/></font></td>
 					            </tr>
 					            <tr align="center">
-					                <td>标题<br/>（注意：标题为纯文本。）<br/><br/></td>
-					                <td><s:textfield name="advertisementModel.title"/></td>
-					                <td><font color="red"><s:fielderror fieldName="advertisementModel.title"/></font></td>
-					            </tr>
-					            <tr align="center">
 					                <td>广告类型<br/>（注意：类型为0,1或2。）<br/><br/></td>
 					                <td><s:textfield name="advertisementModel.type"/></td>
 					                <td><font color="red"><s:fielderror fieldName="advertisementModel.type"/></font></td>
 					            </tr>
 					            <tr align="center">
-					                <td>显示内容<br/><br/></td>
-					                <td><s:textarea name="advertisementModel.content" cssStyle="width:80%; height:200px"/>
-					                <td><font color="red"><s:fielderror fieldName="advertisementModel.content"/></font></td>
+					                <td>链接<br/><br/></td>
+					                <td><s:textarea name="advertisementModel.link" cssStyle="width:80%; height:200px"/>
+					                <td><font color="red"><s:fielderror fieldName="advertisementModel.link"/></font></td>
 					            </tr>
 					            <tr align="center">
 					                <td colspan="3">
@@ -240,8 +225,8 @@
 						</div>
 						
 						<div class="div_text" align="left">
-							<s:textarea id="adverEditor" name="advertisementModel.link" cssStyle="width:100%; height:430px"/>
-							<font color="red"><s:fielderror fieldName="advertisementModel.link"/></font>
+							<s:textarea id="adverEditor" name="advertisementModel.content" cssStyle="width:100%; height:380px"/>
+							<font color="red"><s:fielderror fieldName="advertisementModel.content"/></font>
 						
 							<script type="text/javascript">  
 								UE.getEditor('adverEditor');  

@@ -6,6 +6,8 @@ import org.gudagudaACG.model.ContentModel;
 
 public interface ContentService 
 {
+	List<String> parseLinks(String links);
+	
 	void saveContent(ContentModel contentModel);
 	
 	List<ContentModel> showAllContent();

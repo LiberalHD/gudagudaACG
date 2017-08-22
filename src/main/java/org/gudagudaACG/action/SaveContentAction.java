@@ -23,7 +23,6 @@ public class SaveContentAction extends ActionSupport
 	{       
         if (contentModel != null)
         {
-        	
         	contentService.saveContent(contentModel);
         }
         
@@ -35,10 +34,6 @@ public class SaveContentAction extends ActionSupport
 	    if (contentModel.getTitle().length() == 0) 
 	    {
 	        addFieldError("contentModel.title", "Can't be NUll¡£");
-	    }
-	    if (contentModel.getImage().length() == 0) 
-	    {
-	        addFieldError("contentModel.image", "Can't be NUll¡£");
 	    }
 	    if (contentModel.getAuthor().length() == 0) 
 	    {

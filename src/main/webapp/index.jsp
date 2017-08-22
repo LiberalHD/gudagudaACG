@@ -66,7 +66,7 @@
 						
 						<div class="div_adver_0_inner" align="left" >
 							<s:iterator value="adverList" status="i">
-								<s:property value="link" escapeHtml="false"/>
+								<a href=<s:property value="link"/> style="text-decoration:none;">
 				            		<s:property value="content" escapeHtml="false"/>
 				            	</a>
 								&nbsp;&nbsp;
@@ -75,8 +75,8 @@
 					</div>
 					
 					<div class="div_adver_1" align="left" >
-						<a href='<s:property value="adverRaw1.link" escapeHtml="false"/>'>
-							<s:property value="adverRaw1.content" escapeHtml="false"/>
+						<a href=<s:property value="adverRaw1.link"/> >
+						<s:property value="adverRaw1.content" escapeHtml="false"/>
 						</a>
 					</div>
 				
@@ -122,8 +122,8 @@
 					</div>
 					
 					<div class="div_adver_2" align="left" >
-						<s:property value="adverRaw2.link" escapeHtml="false"/>
-							<s:property value="adverRaw2.content" escapeHtml="false"/>
+						<a href=<s:property value="adverRaw2.link"/> >
+						<s:property value="adverRaw2.content" escapeHtml="false"/>
 						</a>
 					</div>
 					

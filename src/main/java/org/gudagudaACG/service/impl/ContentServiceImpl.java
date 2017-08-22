@@ -15,9 +15,62 @@ public class ContentServiceImpl implements ContentService
 	@Autowired
     private ContentDao contentDao;
 	
+	private String getFirstImage(String content)
+	{
+		String image = "";
+		int start = content.indexOf("<img");
+		int end = content.indexOf("/>", start) + 2;
+		
+		image = content.substring(start, end);
+		
+		return image;
+	}
+	
+	private String deleteWidthandHeight(String image)
+	{
+		String ret = image;
+		
+		int start = image.indexOf("width");
+		if (start != -1)
+		{
+			int end = image.indexOf("\"", image.indexOf("\"", start) + 1) + 1;
+			String width = image.substring(start, end);
+			ret = image.replace(width, "");
+		}
+		
+		start = ret.indexOf("height");
+		if (start != -1)
+		{
+			int end = ret.indexOf("\"", image.indexOf("\"", start) + 1) + 1;
+			String height = ret.substring(start, end);
+			ret = ret.replace(height, "");
+		}
+		
+		return ret;
+	}
+	
+	private String generateImage(String content)
+	{
+		String image = "";
+		
+		image = getFirstImage(content);
+		image = deleteWidthandHeight(image);
+		int pos = image.indexOf("/>");
+		
+		StringBuilder sb = new StringBuilder(image);
+		sb.insert(pos," width=\"100%\"");
+
+		return sb.toString();
+	}
+	
     @Override
     public void saveContent(ContentModel contentModel) 
     {
+    	String image = "";
+    	
+    	image = generateImage(contentModel.getContent());
+    	contentModel.setImage(image);
+    	
     	contentDao.addContent(contentModel);
     }
     
@@ -34,12 +87,23 @@ public class ContentServiceImpl implements ContentService
 	}
     
     @Override
+    public List<String> parseLinks(String links)
+    {
+    	String[] linkarray = links.split(" ");
+    	List<String> ret = java.util.Arrays.asList(linkarray);
+    	
+    	return ret;
+    }
+    
+    @Override
     public ContentModel showOneContent(String title)
     {
     	String queryString = "from ContentModel contentModel where title='" + title + "'";
 		List<ContentModel> contentList = contentDao.selectContent(queryString);
 		
-		return contentList.get(0);
+		ContentModel ret = contentList.get(0);
+
+		return ret;
     }
     
 	@Override

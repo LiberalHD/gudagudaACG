@@ -19,19 +19,11 @@ public class SaveAdvertisementAction extends ActionSupport
 	private UtilService utilService;
 	
 	private AdvertisementModel advertisementModel;
-	
-	private AdvertisementModel formatContent(AdvertisementModel advertisementModel)
-	{
-		advertisementModel.setContent(advertisementModel.getContent().substring(3, advertisementModel.getContent().length()-4));
-		
-		return advertisementModel;
-	}
 
 	public String execute()
 	{       
         if (advertisementModel != null)
         {
-        	advertisementModel = formatContent(advertisementModel);
         	utilService.saveAdvertisement(advertisementModel);
         }
         
@@ -40,10 +32,6 @@ public class SaveAdvertisementAction extends ActionSupport
 	
 	public void validate()
 	{
-	    if (advertisementModel.getTitle().length() == 0) 
-	    {
-	        addFieldError("advertisementModel.title", "Can't be NUll¡£");
-	    }
 	    if (advertisementModel.getDate().length() < 10) 
 	    {
 	        addFieldError("advertisementModel.date", "Format error.");

@@ -51,7 +51,60 @@ public class UtilServiceImpl implements UtilService
 	@Override
 	public void saveBanner(BannerModel bannerModel) 
 	{
+		bannerModel = formatBanner(bannerModel);
+		
 		bannerDao.addBanner(bannerModel);
+	}
+	
+	private BannerModel formatBanner(BannerModel bannerModel)
+	{
+		String image = "";
+		
+		bannerModel.setContent(bannerModel.getContent().substring(3, bannerModel.getContent().length()-4));
+		
+		image = getFirstImage(bannerModel.getContent());
+		image = deleteWidthandHeight(image);
+		
+		int pos = image.indexOf("/>");
+		StringBuilder sb = new StringBuilder(image);
+		sb.insert(pos," width=\"100%\" height=\"500\"");
+		bannerModel.setContent(sb.toString());
+		
+		return bannerModel;
+	}
+	
+	private String getFirstImage(String content)
+	{
+		String image = "";
+		int start = content.indexOf("<img");
+		int end = content.indexOf("/>", start) + 2;
+		
+		image = content.substring(start, end);
+		
+		return image;
+	}
+	
+	private String deleteWidthandHeight(String image)
+	{
+		String ret = image;
+		
+		int start = image.indexOf("width");
+		if (start != -1)
+		{
+			int end = image.indexOf("\"", image.indexOf("\"", start) + 1) + 1;
+			String width = image.substring(start, end);
+			ret = image.replace(width, "");
+		}
+		
+		start = ret.indexOf("height");
+		if (start != -1)
+		{
+			int end = ret.indexOf("\"", image.indexOf("\"", start) + 1) + 1;
+			String height = ret.substring(start, end);
+			ret = ret.replace(height, "");
+		}
+		
+		return ret;
 	}
 	
 	@SuppressWarnings("unchecked")
@@ -89,10 +142,36 @@ public class UtilServiceImpl implements UtilService
 		String queryString = "from BannerModel bannerModel where id='" + id + "'";
 		bannerDao.deleteBanner(queryString);
 	}
+	
+	private AdvertisementModel formatAdvertisement(AdvertisementModel advertisementModel)
+	{
+		String image = "";
+		
+		advertisementModel.setContent(advertisementModel.getContent().substring(3, advertisementModel.getContent().length()-4));
+		
+		image = getFirstImage(advertisementModel.getContent());
+		image = deleteWidthandHeight(image);
+		
+		int pos = image.indexOf("/>");
+		StringBuilder sb = new StringBuilder(image);
+		if (advertisementModel.getType() == 0)
+		{
+			sb.insert(pos," width=\"25%\" height=\"160\"");
+		}
+		else
+		{
+			sb.insert(pos," width=\"100%\"");
+		}
+		advertisementModel.setContent(sb.toString());
+		
+		return advertisementModel;
+	}
 
 	@Override
 	public void saveAdvertisement(AdvertisementModel advertisementModel) 
 	{
+		advertisementModel = formatAdvertisement(advertisementModel);
+		
 		advertisementDao.addAdvertisement(advertisementModel);
 	}
 

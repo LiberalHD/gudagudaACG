@@ -6,6 +6,8 @@ import org.gudagudaACG.model.ImageModel;
 
 public interface ImageService 
 {
+	List<String> parseLinks(String links);
+	
 	void saveImage(ImageModel imageModel);
 	
 	List<ImageModel> showAllImage();

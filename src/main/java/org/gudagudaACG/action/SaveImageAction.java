@@ -35,10 +35,6 @@ public class SaveImageAction extends ActionSupport
 	    {
 	        addFieldError("imageModel.title", "Can't be NUll¡£");
 	    }
-	    if (imageModel.getImage().length() == 0) 
-	    {
-	        addFieldError("imageModel.image", "Can't be NUll¡£");
-	    }
 	    if (imageModel.getAuthor().length() == 0) 
 	    {
 	        addFieldError("imageModel.author", "Can't be NUll¡£");

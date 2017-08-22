@@ -19,19 +19,11 @@ public class SaveBannerAction extends ActionSupport
 	private UtilService utilService;
 	
 	private BannerModel bannerModel;
-
-	private BannerModel formatContent(BannerModel bannerModel)
-	{
-		bannerModel.setContent(bannerModel.getContent().substring(3, bannerModel.getContent().length()-4));
-		
-		return bannerModel;
-	}
 	
 	public String execute()
 	{       
         if (bannerModel != null)
         {
-        	bannerModel = formatContent (bannerModel);
         	utilService.saveBanner(bannerModel);
         }
         
