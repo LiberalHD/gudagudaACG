@@ -4,6 +4,13 @@
 
 <struts>
 
+	<package name="default"  namespace="/" extends="struts-default">  
+		<default-action-ref name="index"/>  
+			<action name="index">  
+			<result>/Index.jsp</result>
+		</action>  
+	</package>  
+
 	<package name="page" extends="struts-default" namespace="/">
 		
 		<action name="index" class="indexAction">
