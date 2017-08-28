@@ -31,7 +31,7 @@
 				
 				<div class="div_content" align="left">
 					<div class="div_dialog" align="left">
-						当前位置： <a href="<s:url action='index' />" >首页</a><br/>
+						<h1>当前位置： <a href="<s:url action='index' />" >首页</a><br/></h1>
 					</div>
 				
 					<div class="div_banner" align="left">
@@ -41,7 +41,12 @@
 									<s:iterator value="bannerList" status="i">
 									<li>
 										<div class="div_banner_img" align="left">
+											<s:if test="httpflag == 1">
+								            <a href=<s:property value="link"/> >
+								            </s:if>
+								            <s:else>
 								            <a href="<s:url action='showContent'><s:param name="title" value="link"/></s:url>">
+								            </s:else>
 							            		<s:property value="content" escapeHtml="false"/>
 							            	</a>
 							            	<div class="div_banner_title" align="left">
@@ -86,9 +91,10 @@
 						</div>
 						
 						<div class="div_new_0_5" align="left" >
-							<p align="right">
-								<br/><a href="<s:url action='allContent'/>" >显示全部</a>
-							</p>
+							<h2 align="right">
+								<br/><br/>
+								<a href="<s:url action='allContent'/>" >显示全部</a>
+							</h2>
 						</div>
 							
 						<%int i = 0;%>
@@ -98,7 +104,7 @@
 							<% }else{%>
 							<div class="div_new_2" align="left">
 							<% }i ++;%>
-								<table border= "1" style="table-layout:fixed;" width=100%>
+								<table border= "0" style="table-layout:fixed;" width=100%>
 						            <tr align="left">
 										<td rowspan=2 width="25%">
 											<a style="text-decoration:none" href="<s:url action='showContent'><s:param name="title" value="title"/></s:url>">
@@ -106,14 +112,18 @@
 						            		</a>
 						            	</td>
 										<td style="word-wrap:break-word">
-											<a style="text-decoration:none" href="<s:url action='showContent'><s:param name="title" value="title"/></s:url>">
-						            			<s:property value="title" /><br/>
-						            		</a>
+											<h2>
+												<a style="text-decoration:none" href="<s:url action='showContent'><s:param name="title" value="title"/></s:url>">
+							            			<s:property value="title" /><br/>
+							            		</a>
+						            		</h2>
 										</td>
 									</tr>
 									<tr align="left" height="70%">
 										<td style="word-wrap:break-word">
-											<s:property value="abstractstr" />
+											<p>
+												<s:property value="abstractstr" />
+											</p>
 										</td>
 									</tr>
 						        </table>
@@ -133,9 +143,10 @@
 						</div>
 						
 						<div class="div_image_0_5" align="left" >
-							<p align="right">
-								<br/><a href="<s:url action='allImage'/>" >显示全部</a>
-							</p>
+							<h2 align="right">
+								<br/><br/>
+								<a href="<s:url action='allImage'/>" >显示全部</a>
+							</h2>
 						</div>
 						
 						<div class="div_image_outer" align="left">
@@ -147,7 +158,7 @@
 								<div class="div_image_1" align="left">
 								<% }%>
 								
-									<table border= "1" style="table-layout:fixed;" width=100%>
+									<table border= "0" style="table-layout:fixed;" width=100%>
 							            <tr align="center">
 											<td>
 												<a style="text-decoration:none" href="<s:url action='showImage'><s:param name="title" value="title"/></s:url>">
@@ -157,9 +168,11 @@
 										</tr>
 										<tr align="center" height="30px">
 											<td style="word-wrap:break-word">
-												<a style="text-decoration:none" href="<s:url action='showImage'><s:param name="title" value="title"/></s:url>">
-							            			<s:property value="title" /><br/>
-							            		</a>
+												<h2>
+													<a style="text-decoration:none" href="<s:url action='showImage'><s:param name="title" value="title"/></s:url>">
+								            			<s:property value="title" /><br/>
+								            		</a>
+								            	</h2>
 											</td>
 										</tr>
 							        </table>
@@ -178,10 +191,12 @@
 			
 			<div class="div_bottom" align="left">
 				<div class="div_links" align="left">
-					<p>
-						<a href="https://liberalhd.github.io/" >个人主页</a><br/>
-						<a href="<s:url action='test' />" >测试页面</a><br/>
-					</p>
+					<s:iterator value="logoList" status="i">
+						<a href=<s:property value="link"/> style="text-decoration:none;">
+		            		<s:property value="content" escapeHtml="false"/>
+		            	</a>
+						&nbsp;
+			        </s:iterator>
 				</div>
 			</div>
 		</div>

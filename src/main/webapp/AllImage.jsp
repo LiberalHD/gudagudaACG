@@ -30,13 +30,13 @@
 				
 				<div class="div_content" align="left">
 					<div class="div_dialog" align="left">
-						当前位置： <a href="<s:url action='index' />" >首页</a> -> 全部图片<br/>
+						<h1>当前位置： <a href="<s:url action='index' />" >首页</a> -> 全部图片<br/></h1>
 					</div>
 				
 					<div class="div_images" align="center">
-						<p align = "right">
+						<h2 align = "right">
 				        	总图片数：<s:property value="imagenum" />
-				        </p>
+				        </h2>
 					
 						<% int i = 0;%>
 						<s:iterator value="imageList" status="i">
@@ -45,9 +45,9 @@
 							<% }else{%>
 							<div class="div_image_2" align="left">
 							<% }%>
-								<table border= "1" style="table-layout:fixed;" width=100%>
+								<table border= "0" style="table-layout:fixed;" width=100%>
 						            <tr align="left">
-										<td>
+										<td align="center">
 											<a style="text-decoration:none" href="<s:url action='showImage'><s:param name="title" value="title"/></s:url>">
 						            			<s:property escapeHtml="false" value="image" />
 						            		</a>
@@ -55,21 +55,23 @@
 									</tr>
 									<tr align="center" height="30px">
 										<td style="word-wrap:break-word">
-											<a style="text-decoration:none" href="<s:url action='showImage'><s:param name="title" value="title"/></s:url>">
-						            			<s:property value="title" /><br/>
-						            		</a>
+											<h2>
+												<a style="text-decoration:none" href="<s:url action='showImage'><s:param name="title" value="title"/></s:url>">
+							            			<s:property value="title" />
+							            		</a>
+						            		</h2>
+										</td>
+									</tr>
+									<!-- <tr align="center" height="30px">
+										<td style="word-wrap:break-word">
+						            		<p>作者：<s:property value="author" /></p>
 										</td>
 									</tr>
 									<tr align="center" height="30px">
 										<td style="word-wrap:break-word">
-						            		作者：<s:property value="author" /><br/>
+						            		<p>日期：<s:property value="date.substring(0, 10)" /></p>
 										</td>
-									</tr>
-									<tr align="center" height="30px">
-										<td style="word-wrap:break-word">
-						            		日期：<s:property value="date" /><br/>
-										</td>
-									</tr>
+									</tr> -->
 						        </table>
 							</div>
 							<%i++; %>

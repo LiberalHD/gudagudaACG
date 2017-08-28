@@ -30,13 +30,13 @@
 				
 				<div class="div_content" align="left">
 					<div class="div_dialog" align="left">
-				        	当前位置： <a href="<s:url action='index' />" >首页</a> -> 全部新闻<br/>
+			        	<h1>当前位置： <a href="<s:url action='index' />" >首页</a> -> 全部新闻<br/></h1>
 					</div>
 				
 					<div class="div_news" align="left">
-						<p align = "right">
+						<h2 align = "right">
 				        	总新闻数：<s:property value="newsnum" />
-				        </p>
+				        </h2>
 					
 						<%int i = 0;%>
 						<s:iterator value="contentList" status="i">
@@ -45,28 +45,30 @@
 							<% }else{%>
 							<div class="div_new_2" align="left">
 							<% }i ++;%>
-								<table border= "1" style="table-layout:fixed;" width=100%>
+								<table border= "0" style="table-layout:fixed;" width=100%>
 						            <tr align="left">
 										<td rowspan=2 width="25%">
 											<a style="text-decoration:none" href="<s:url action='showContent'><s:param name="title" value="title"/></s:url>">
 						            			<s:property escapeHtml="false" value="image" />
 						            		</a>
 						            	</td>
-										<td style="word-wrap:break-word">
-											<a style="text-decoration:none" href="<s:url action='showContent'><s:param name="title" value="title"/></s:url>">
-						            			<s:property value="title" /><br/>
-						            		</a>
+										<td style="word-wrap:break-word" width="35%">
+											<h2>
+												<a style="text-decoration:none" href="<s:url action='showContent'><s:param name="title" value="title"/></s:url>">
+							            			<s:property value="title" /><br/>
+							            		</a>
+						            		</h2>
+										</td>
+										<td style="word-wrap:break-word" width="25%">
+						            		<p>作者：<s:property value="author" /><br/></p>
 										</td>
 										<td style="word-wrap:break-word">
-						            		作者：<s:property value="author" /><br/>
-										</td>
-										<td style="word-wrap:break-word">
-						            		日期：<s:property value="date" /><br/>
+						            		<p><s:property value="date.substring(0, 10)" /><br/></p>
 										</td>
 									</tr>
 									<tr align="left" height="70%">
 										<td style="word-wrap:break-word" colspan=3>
-											<s:property value="abstractstr" />
+											<p><s:property value="abstractstr" /></p>
 										</td>
 									</tr>
 						        </table>

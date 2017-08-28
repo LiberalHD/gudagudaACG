@@ -1,8 +1,35 @@
 body
 {
+	font-size: 30px;
+	color: #000000;
+	font-family: "Microsoft Yahei", "STHupo", "HYZhuZiTongNianTiW Regular";
+}
+
+h1
+{
+	font-size: 30px;
+	color: #000000;
+	font-family: "Microsoft Yahei", "STHupo", "HYZhuZiTongNianTiW Regular";
+	font-weight: bold;
+}
+
+h2
+{
 	font-size: 25px;
 	color: #000000;
-	font-family: "HYZhuZiTongNianTiW Regular", "Microsoft Yahei", "STHupo"
+	font-family: "Microsoft Yahei", "STHupo", "HYZhuZiTongNianTiW Regular";
+	font-weight: bold;
+	line-height:100%;
+	margin:10px;
+}
+
+p
+{
+	font-size: 25px;
+	color: #000000;
+	font-family: "Microsoft Yahei", "STHupo", "HYZhuZiTongNianTiW Regular";
+	line-height:110%;
+	margin:5px;
 }
 
 .div_body
@@ -119,7 +146,9 @@ body
 	right: auto;
 	bottom: auto;
 	
-	background-color: #ffffff;
+	background-color: #e3edf7;
+	border-style: solid;
+  	border-color: #5B8DCC;
 }
 
 .div_image_2
@@ -134,7 +163,9 @@ body
 	right: auto;
 	bottom: auto;
 	
-	background-color: #b0c6f9;
+	background-color: #e3edf7;
+	border-style: solid;
+  	border-color: #5B8DCC;
 }
 
 .div_links

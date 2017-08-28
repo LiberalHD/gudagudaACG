@@ -23,6 +23,7 @@ public class IndexAction extends ActionSupport
 	private int imagenum = 10;
 	private int bannernum = 6;
 	private int advernum = 3;
+	private int logonum = 3;
 	
 	private static final long serialVersionUID = 1L;
 	
@@ -42,6 +43,8 @@ public class IndexAction extends ActionSupport
 	private List<AdvertisementModel> adverList;
 	private AdvertisementModel adverRaw1, adverRaw2;
 	
+	private List<AdvertisementModel> logoList;
+	
 	private ParasModel paras;
 	
 	private void parasSetting()
@@ -50,6 +53,8 @@ public class IndexAction extends ActionSupport
 		imagenum = paras.getIndexImageNum();
 		bannernum = paras.getBannerNum();
 		advernum = paras.getAdvertisementNum();
+		
+		logonum = 4;
 	}
 	
 	public String execute()
@@ -64,10 +69,12 @@ public class IndexAction extends ActionSupport
 		adverList = utilService.showLatestKAdvertisement(advernum, 0);
 		adverRaw1 = utilService.showLatestKAdvertisement(advernum, 1).get(0);
 		adverRaw2 = utilService.showLatestKAdvertisement(advernum, 2).get(0);
+		
+		logoList = utilService.showLatestKAdvertisement(logonum, -1);
 				
 		return SUCCESS;
 	}
-	
+
 	public int getImagenum() {
 		return imagenum;
 	}
@@ -106,6 +113,22 @@ public class IndexAction extends ActionSupport
 
 	public void setBannerList(List<BannerModel> bannerList) {
 		this.bannerList = bannerList;
+	}
+
+	public int getLogonum() {
+		return logonum;
+	}
+
+	public void setLogonum(int logonum) {
+		this.logonum = logonum;
+	}
+
+	public List<AdvertisementModel> getLogoList() {
+		return logoList;
+	}
+
+	public void setLogoList(List<AdvertisementModel> logoList) {
+		this.logoList = logoList;
 	}
 
 	public AdvertisementModel getAdverRaw1() {

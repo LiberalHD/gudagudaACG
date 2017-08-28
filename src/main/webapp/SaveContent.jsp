@@ -37,7 +37,7 @@
 				
 				<div class="div_content" align="center">
 					<div class="div_dialog" align="left">
-						当前位置： <a href="<s:url action='index' />" >首页</a>-> 管理员页<br/>
+						<h1>当前位置： <a href="<s:url action='index' />" >首页</a>-> 管理员页<br/></h1>
 					</div>
 				
 					<hr/>
@@ -206,7 +206,7 @@
 					                <td><font color="red"><s:fielderror fieldName="advertisementModel.date"/></font></td>
 					            </tr>
 					            <tr align="center">
-					                <td>广告类型<br/>（注意：类型为0,1或2。）<br/><br/></td>
+					                <td>广告类型<br/>（注意：类型为0,1或2.友情链接为-1。）<br/><br/></td>
 					                <td><s:textfield name="advertisementModel.type"/></td>
 					                <td><font color="red"><s:fielderror fieldName="advertisementModel.type"/></font></td>
 					            </tr>

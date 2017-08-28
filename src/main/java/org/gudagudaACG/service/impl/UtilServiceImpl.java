@@ -52,8 +52,22 @@ public class UtilServiceImpl implements UtilService
 	public void saveBanner(BannerModel bannerModel) 
 	{
 		bannerModel = formatBanner(bannerModel);
+		bannerModel.setHttpflag(judgeHTTP(bannerModel)); 
 		
 		bannerDao.addBanner(bannerModel);
+	}
+	
+	private int judgeHTTP(BannerModel bannerModel)
+	{
+		String temp = bannerModel.getLink().substring(0, 4);
+		if (temp.equalsIgnoreCase("http"))
+		{
+			return 1;
+		}
+		else
+		{
+			return 0;
+		}
 	}
 	
 	private BannerModel formatBanner(BannerModel bannerModel)
@@ -142,6 +156,7 @@ public class UtilServiceImpl implements UtilService
 		String queryString = "from BannerModel bannerModel where id='" + id + "'";
 		bannerDao.deleteBanner(queryString);
 	}
+
 	
 	private AdvertisementModel formatAdvertisement(AdvertisementModel advertisementModel)
 	{
@@ -158,7 +173,11 @@ public class UtilServiceImpl implements UtilService
 		{
 			sb.insert(pos," width=\"25%\" height=\"160\"");
 		}
-		else
+		else if (advertisementModel.getType() == -1)
+		{
+			sb.insert(pos," width=\"20%\" height=\"100%\"");
+		}
+		else //1 & 2
 		{
 			sb.insert(pos," width=\"100%\"");
 		}

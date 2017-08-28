@@ -1,8 +1,16 @@
 body
 {
-	font-size: 25px;
+	font-size: 30px;
 	color: #000000;
-	font-family: "Microsoft Yahei", "STHupo", "HYZhuZiTongNianTiW Regular", 
+	font-family: "Microsoft Yahei", "STHupo", "HYZhuZiTongNianTiW Regular";
+}
+
+h1
+{
+	font-size: 30px;
+	color: #000000;
+	font-family: "Microsoft Yahei", "STHupo", "HYZhuZiTongNianTiW Regular";
+	font-weight: bold;
 }
 
 p
@@ -115,6 +123,8 @@ p
 	left: 0px;
 	right: auto;
 	bottom: auto;
+	
+	background-color: #ffffff;
 }	
 	
 .div_links

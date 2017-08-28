@@ -26,15 +26,27 @@ public class BannerModel implements Comparable
 	
 	@Column
     private String link;
+	
+	@Column
+    private int httpflag;
 
 	public BannerModel() {}
 	
-	public BannerModel(String date, String title, String content, String link) 
+	public BannerModel(String date, String title, String content, String link, int httpflag) 
 	{
 		this.date = date;
 		this.title = title;
 		this.content = content;
 		this.link = link;
+		this.httpflag = httpflag;
+	}
+
+	public int getHttpflag() {
+		return httpflag;
+	}
+
+	public void setHttpflag(int httpflag) {
+		this.httpflag = httpflag;
 	}
 
 	public int getId() {

@@ -30,12 +30,12 @@
 				
 				<div class="div_content" align="center">
 					<div class="div_dialog" align="left">
-						当前位置： <a href="<s:url action='index' />" >首页</a> -> 图片内容<br/>
+						<h1>当前位置： <a href="<s:url action='index' />" >首页</a> -> 图片内容<br/></h1>
 					</div>
 	    			
 				    <table style="table-layout:fixed;" width=100%>
 			            <tr align="center">
-			            	<td colspan="3"><h2><s:property value="imageModel.title" /></h2><hr/></td>
+			            	<td colspan="3"><h2><br/><s:property value="imageModel.title" /></h2><hr/></td>
 			            </tr>
 			            
 			            <tr align="left">

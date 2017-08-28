@@ -5,6 +5,14 @@ body
 	font-family: "Microsoft Yahei", "STHupo", "HYZhuZiTongNianTiW Regular", 
 }
 
+h1
+{
+	font-size: 30px;
+	color: #000000;
+	font-family: "Microsoft Yahei", "STHupo", "HYZhuZiTongNianTiW Regular";
+	font-weight: bold;
+}
+
 .div_body
 {
 	width:100%;  
